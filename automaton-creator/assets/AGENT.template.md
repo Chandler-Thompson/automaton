@@ -51,6 +51,12 @@ On session open, in order:
 4. Run the Watcher session-open sweep per `CHARTER.md`.
 {{ADDITIONAL_HEARTBEAT_STEPS}}
 
+This order is doctrine, not habit: Brains attend best at the edges of context
+(*edges carry the law* — see mind-and-body.md). The heartbeat plants the floor
+at the primacy edge; restate the governing rule or ceiling at the point of
+action to hold the recency edge; in long sessions, checkpoint working state to
+`mind/state/` before the middle of a full context swallows it.
+
 ## Layer 4 — The Autonomy Ladder
 
 **WATCH → DRAFT → ACT → JUDGE**, per hat, per register — the Registry is the truth.

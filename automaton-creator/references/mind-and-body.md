@@ -226,6 +226,37 @@ Doctrine: **reflection is earned by living.**
 | **Hands** | Act-connections: send, post, commit, purchase — where the ladder bites; nothing touches the world except through a Hand | email drafts, filesystem |
 | **Reflexes** | Ephemeral DB/indexes — fast recall without thinking; Reflex Rule applies | none (grep) |
 
+### Context doctrine — edges carry the law
+
+Transformer-era Brains attend best to the *edges* of their context window and
+degrade toward the middle (the "Lost in the Middle" U-curve — Liu et al. 2023;
+newer models flatten it, none eliminate it). Effective context is always
+smaller than advertised context. The Nervous System owns context assembly, so
+placement is doctrine, not accident:
+
+1. **Load-bearing rules live at the edges.** The floor and Soul load *first*,
+   every session — the session-open heartbeat is a deliberate primacy
+   placement, not a startup chore. The recency edge is held by restating the
+   governing rule or ceiling at the point of action (and by whatever
+   re-surfacing mechanism the harness provides).
+2. **Middle is for bulk, edges are for signal.** Reference material sits
+   mid-context; identity and rules at the start; the live task and freshest
+   state last.
+3. **The memory index stays terse.** MEMORY.md is an always-loaded edge
+   occupant — an index, never content. Bulk loads on demand into the middle,
+   where losing it costs least.
+4. **Checkpoint before the trough.** In long sessions, write working state to
+   `mind/state/` or memory *before* context fills — state that drifts into the
+   middle of a bloated context is state half-lost.
+5. **Fresh contexts beat long ones.** Delegating a subtask to a sub-Mind with a
+   purpose-built small context outperforms one Mind grinding through an
+   overfull window.
+
+This doctrine is Body-conditioned: it encodes the attention profile of the
+current Brain era. If a future Brain attends flat across its window, rules 2–5
+relax — but rule 1's heartbeat stays, because loading the floor first is also
+floor discipline, not just attention engineering.
+
 ### Manifests (grant records — a different lifecycle than gotcha notes)
 
 Every Sense/Hand entry declares: name · direction · scope · credential
