@@ -234,7 +234,9 @@ Standing behaviors, wired into AGENT.md:
   Automaton + occasional random flesh-out questions (incentivized).
 - **Skill genesis + the reflection governor** ("reflection is earned by living") —
   autonomous skills that can never launder a rung; event-sourced reflection only;
-  curation shrinks; every self-modification is an atomic commit. Full loop:
+  curation shrinks; every self-modification is an atomic commit; after substantive
+  work, a brief guarded reflection pass is expected (proportionate, null-outcome
+  valid, Mind-only applies, floor never a target). Full loop:
   [references/mind-and-body.md](references/mind-and-body.md).
 - Watcher self-extension of *reading* scope (ledgered + committed — the reason
   floor 4 exists).
