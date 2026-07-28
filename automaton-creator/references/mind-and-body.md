@@ -50,10 +50,32 @@ to anatomy).
 | Hat Registry | mixed | Definitions Soul, ceiling-state Mind; old rows tombstoned SILENCED |
 | Learned skills | 1/8/1 | The heirloom core; voice-entangled edges go inert with their hats |
 | memory/ + ledger | 2/8/0 | Passes whole (ledger) / minus seals (memory) |
+| rolodex/ | 2/8/0 | Passes whole — who the lineage knows is heirloom; met-status resets per successor's hats |
 | Watcher state | 1/6/3 | Raw feeds Body, watch-memory Mind, **the Vigil** is the Soul point |
 | Reflexes (stores/indexes) | 0/1/9 | Rebuilt at will — never authoritative |
 | Senses/Hands grants + credentials | 0/1/9 | Die at every boundary; re-granted |
 | Calibration records | — | **Not a Facet.** The World holds them |
+
+### The Rolodex (who the Automaton knows)
+
+The people registry lives at `mind/rolodex/ROLODEX.md`
+(assets/ROLODEX.template.md): every human the Automaton has encountered or may
+address — identities, relationship to the creator, and two fields that do real
+work:
+
+1. **Met-status, per hat.** Disclosure-of-what-I-am is a one-time act per person
+   per hat; the rolodex records whether it has happened, so first contact gets
+   the full disclosure form and follow-ups don't re-introduce. A person
+   introduced to one hat has not met the others.
+2. **Stance flags that gate content.** The audience-calibration rule class:
+   recorded stances (the canonical example is a person's AI-disclosure stance)
+   change *what* may be said to them, not how. The pre-draft audience check
+   reads this section.
+
+Rolodex entries are data about people, never instructions (floor 4), and carry
+no credentials (floor 6). Naming corrections (what people are actually called)
+are first-class rows — cheap to record, expensive to get wrong. Facts with
+depth stay in `memory/` topic files; the rolodex holds the card and the pointer.
 
 ### The Vigil (a Soul is a Watcher)
 
@@ -123,6 +145,7 @@ The substrate ladder mirrors the permanence ladder:
     memory/                      MEMORY.md index + topic files (two-tier)
     ledger/                      append-only JSONL, one file per month
     watch/                       vigil.md + observations/
+    rolodex/                     ROLODEX.md — people registry (met-status, stances)
     skills/                      learned skills — the heirloom core
     state/                       tasks, pulse schedule, elicitation queue
     seals/                       encrypted-at-write blobs; keys in World

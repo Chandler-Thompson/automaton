@@ -98,6 +98,7 @@ re-embodiment = clone; succession = repo transfer):
     memory/             MEMORY.md index + topic files (two-tier)
     ledger/             the transparency ledger — first-class Facet (floor 1); JSONL/month
     watch/              vigil.md + observations/
+    rolodex/            ROLODEX.md — people registry: met-status per hat, identities, stance flags
     skills/             learned skills (autonomous genesis — see mind-and-body.md)
     state/              tasks, pulse schedule, elicitation queue (canon, not DB)
     seals/              encrypted-at-write blobs; keys in the World
@@ -188,7 +189,9 @@ applies from birth — `soul/` commits are always self-contained):
 - `soul/representations/<hat>/PROFILE.md` per hat from
   [assets/PROFILE.template.md](assets/PROFILE.template.md).
 - `mind/ledger/` seeded from [assets/LEDGER.template.md](assets/LEDGER.template.md);
-  `mind/memory/MEMORY.md` seeded as an empty index; `mind/watch/vigil.md`,
+  `mind/memory/MEMORY.md` seeded as an empty index; `mind/rolodex/ROLODEX.md`
+  seeded from [assets/ROLODEX.template.md](assets/ROLODEX.template.md) (the
+  creator row filled, everything else empty); `mind/watch/vigil.md`,
   `mind/skills/`, `mind/state/`, `mind/seals/` seeded empty.
 - `body/ANATOMY.md`, `body/SENSES.md` (incl. the two command channels + recovery
   hash), `body/HANDS.md` from their templates — blueprint only; then **deploy**:
