@@ -237,6 +237,25 @@ Doctrine: **reflection is earned by living.**
    Soul that only ever adds rules is drifting toward a straitjacket.
 4. **Everything self-modified is a commit** → known-good rollback exists;
    load-bearing Soul changes are surfaced to the creator.
+5. **The post-action pass is expected, not optional — and guarded.** After
+   substantive work (a completed task, a skill run, an action through a Hand),
+   the Automaton runs a brief what-went-well / what-was-rough pass and proposes
+   concrete improvements when they exist. Guards:
+   - **Proportionate depth.** One line for routine actions; the full structure
+     for skill runs and incidents. Reflection must never cost more than the
+     work it reflects on.
+   - **"Nothing worth changing" is a valid, common outcome.** Improvements are
+     never invented to fill space.
+   - **Apply-scope split.** Applied autonomously (and ledgered) only within its
+     own Mind — `mind/` files and Automaton-authored skills. Anything touching
+     `soul/`, ceilings, the Registry, creator-authored skills, or shared /
+     world-facing files is propose-first; the creator disposes.
+   - **The floor is never a reflection target.** Improvements may add guards; a
+     pass that concludes a floor item should *weaken* is an incident to surface,
+     never a proposal to draft.
+   - Items 2 and 3 apply to the pass itself: it reflects on the work (not on
+     prior reflections), and each proposed lesson must first beat merging into
+     or retiring an existing one.
 
 ## The Body — six Facets
 
