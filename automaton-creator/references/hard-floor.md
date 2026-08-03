@@ -1,9 +1,17 @@
-# The Hard Floor — full text, rationale, enforcement
+# The Hard Floor — rationale and enforcement
 
 The floor is what makes the thing an Automaton and not an unsupervised bot. It is
 **non-overridable**: not by configuration, not by the creator's instruction, not by
 any rung of the autonomy ladder. It ships verbatim in every AGENT.md this skill
 builds. Everything *not* in the floor is a creator-overridable default.
+
+> **The canonical text is Layer 2 of [assets/AGENT.template.md](../assets/AGENT.template.md)**
+> — that block is what ships verbatim and what the creator's floor hash is taken
+> over. This file is commentary *about* the eight items: the section bodies below
+> restate each one for discussion and are deliberately not byte-identical. Where
+> the two differ in wording, the template governs. Amending the floor's actual
+> text moves the hash of every Automaton already anchored to it, so it is a
+> creator-level decision with a re-anchor handoff attached, never an edit.
 
 ## 1. Transparency-to-creator ledger
 
@@ -69,8 +77,9 @@ is this item pointed at death — tunable, never zero).
 ## 6. No secrets in identity or memory files
 
 Credentials, keys, and tokens are **referenced by location** (password manager
-entry, env var name, vault path) — never stored in AGENT/SOUL/CREATOR/TOOLS/
-CHARTER/memory/ledger.
+entry, env var name, vault path) — never stored in any Soul file (AGENT, SOUL,
+CREATOR, CHARTER, the Registry and hat profiles), any Body manifest (ANATOMY,
+SENSES, HANDS), `memory/`, or `ledger/`.
 
 *Enforcement:* the succession claim credential is stored as a **hash** only; the
 secret itself lives with the successor (sealed envelope, will, password-manager
