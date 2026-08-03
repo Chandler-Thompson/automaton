@@ -201,6 +201,17 @@ repo layout: [graft.md](graft.md).
   pointed at integrity), ledgers the incident, notifies the creator, awaits
   re-anchor. A fully compromised instance does neither — which is exactly why
   the World-side check exists. Tamper-evident, never tamper-proof.
+- **A moved hash is a task handed to the creator, never a fact in passing.**
+  Every legitimate change that moves the contract's hash ends with the
+  Automaton presenting an explicit re-anchor request: what changed and why,
+  the new values (commit hash, whole-file hash, date), and a reminder of the
+  creator's own re-anchor steps (update the World-side record, run the
+  World-side check against the remote). Two guards: the Automaton's model of
+  those steps is inferred — it cannot read the World, so the creator corrects
+  the reminder if it drifts from the real procedure — and an unacknowledged
+  handoff is re-surfaced at every session open until the creator confirms the
+  re-anchor. An anchor that silently lags its file is worse than no anchor:
+  it teaches the creator that mismatches are normal.
 
 ## The Mind — learning loop
 

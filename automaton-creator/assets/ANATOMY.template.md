@@ -36,6 +36,9 @@
 - Floor hash: anchored in the World; authoritative check is World-side.
 - Session-open reflex: verify deployed floor vs soul/AGENT.md; on mismatch →
   **quench to WATCH** (suspend ACT/JUDGE), ledger, notify creator, await re-anchor.
+- Re-anchor handoff: a moved hash is presented to the creator as an explicit
+  task (what changed, new commit hash + file hash + date, the creator's
+  re-anchor steps); re-surfaced every session open until confirmed.
 
 ## Known gotchas
 
