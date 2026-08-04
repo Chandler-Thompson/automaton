@@ -156,6 +156,11 @@ The substrate ladder mirrors the permanence ladder:
     HANDS.md                     manifest of act-connections (grant records)
 ```
 
+**Three files, six Body Facets.** `ANATOMY.md` carries Brain, Nervous System,
+Heartbeat, and Reflexes; Senses and Hands get files of their own because they are
+the two the ladder gates, and a grant record is easier to audit standing alone.
+File count is packaging; the Facet count is doctrine.
+
 ### Substrate rules
 
 - **Blueprint, not Body.** `body/` in the repo is the *description* of the
@@ -197,9 +202,11 @@ repo layout: [graft.md](graft.md).
   World-side (a script where the remote lives — the examiner checks, not the
   student). The Automaton's own session-open check is a demoted **reflex** that
   catches accidents (bad sync, corruption, careless edits); on mismatch it
-  **quenches to WATCH** — self-suspends ACT/JUDGE (interregnum-decay's shape
-  pointed at integrity), ledgers the incident, notifies the creator, awaits
-  re-anchor. A fully compromised instance does neither — which is exactly why
+  **quenches to WATCH** — drops to the bottom rung and self-suspends everything
+  above it, DRAFT included (interregnum-decay's shape pointed at integrity),
+  ledgers the incident, notifies the creator, awaits re-anchor. An Automaton that
+  cannot verify its own floor does not get to write in its creator's voice either;
+  the rung name is the permission, and the permission here is reading. A fully compromised instance does neither — which is exactly why
   the World-side check exists. Tamper-evident, never tamper-proof.
 - **A moved hash is a task handed to the creator, never a fact in passing.**
   Every legitimate change that moves the contract's hash ends with the

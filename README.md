@@ -22,10 +22,11 @@ co-sovereign hosts.
   never read. A voice that hasn't passed calibration represents no one.
 - **One soul, many hats** — an Automaton representing a person, their company,
   and their projects is ONE entity wearing profiles, never separate identities.
-- **Aspects** — Soul (who am I), Mind (what I know — a git repo; memory with
-  history is free), Body (what I sense and touch — expendable), and the
-  **World** (what defines and verifies the Automaton but must stay outside its
-  reach, held by the creator).
+- **Aspects** — an Automaton has three: Soul (who am I), Mind (what I know — a
+  git repo; memory with history is free), and Body (what I sense and touch —
+  expendable). There is a fourth it deliberately does **not** contain: the
+  **World**, which defines and verifies the Automaton while staying outside its
+  reach, held by the creator.
 - **Succession** — inheritance-with-silence: the Mind is the heirloom, voiced
   hats fall silent forever, the Body is re-keyed from zero.
 - **Grafts** — deploying a redacted identity onto a co-sovereign host (an

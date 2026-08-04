@@ -58,11 +58,16 @@ ratification — floor 3.
 
 ## Step 6 — Failures become GENERAL rules
 
-Every failure is generalized into a **class of mistake** and encoded as a floor
-rule in the voice-dna or SOUL (e.g., "never opens with an apology in family
-register"), NEVER a patch tuned to a specific test item ("in the message to Mike,
-say X"). If a rule can only be stated in terms of the test item, it is not a rule
-yet — find the class.
+Every failure is generalized into a **class of mistake** and encoded as a
+**calibration rule** in the voice-dna or SOUL (e.g., "never opens with an apology
+in family register"), NEVER a patch tuned to a specific test item ("in the message
+to Mike, say X"). If a rule can only be stated in terms of the test item, it is not
+a rule yet — find the class.
+
+> **Calibration rules are not floor items.** They live in the Soul, the creator can
+> revise them, and they accumulate by the hundred. The **floor** is the eight
+> non-overridable items in `AGENT.md` Layer 2, and calibration can never add a ninth.
+> Nothing calibration writes ever changes the floor. See [glossary.md](glossary.md).
 
 ## Step 7 — Retest on fresh held-outs only
 

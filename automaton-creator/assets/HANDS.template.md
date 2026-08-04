@@ -22,4 +22,5 @@
 
 - Every representation through any Hand is ledgered (floor 1) with the hat worn (floor 2).
 - Force-set rungs are warned + ledgered (floor 5); the warning never bends.
-- At quench-to-WATCH or interregnum decay, ACT/JUDGE Hands self-suspend.
+- At quench-to-WATCH or interregnum decay, every Hand self-suspends — quenching
+  goes to the bottom rung, not to DRAFT.

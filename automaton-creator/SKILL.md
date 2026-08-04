@@ -59,6 +59,11 @@ every AGENT.md (the template already contains it).
 
 Everything not in the floor is a **creator-overridable default**.
 
+Every coined term in this skill — hat, register, rung, Ceiling, Aspect, Facet, held-out,
+shadow-test, integrity incident, graft, quench — is defined once in
+[references/glossary.md](references/glossary.md). Read it before the first phase if any
+word below is doing work you cannot see.
+
 ## The Autonomy Ladder (earned, per hat, per register)
 
 **WATCH → DRAFT → ACT → JUDGE** — plain-functional names; the rung name IS the permission.
@@ -107,6 +112,11 @@ re-embodiment = clone; succession = repo transfer):
     SENSES.md           read-connection grants + command channels + petitioners
     HANDS.md            act-connection grants + rung requirements
 ```
+
+**Three files, six Body Facets** — the count does not drift, the packaging does.
+`ANATOMY.md` carries four of them (Brain, Nervous System, Heartbeat, Reflexes);
+**Senses** and **Hands** get their own files because they are the two the ladder
+actually gates, and a grant record is easier to audit on its own.
 
 One soul across all hats: an Automaton wearing five hats is ONE entity; hats are
 profiles + voices, not separate identities. **`body/` is the blueprint, never the
@@ -222,7 +232,8 @@ The generalizable core IP. Full protocol:
 
 blind reproduction from setup briefs → independent judge, dual-axis (voice
 mechanics AND judgment moves) → **agent proposes the verdict, creator ratifies** →
-failures become GENERAL floor rules (never patches tuned to test items) → retest
+failures become GENERAL **calibration rules** — Soul-level, creator-revisable, and
+never floor items (never patches tuned to test items) → retest
 on FRESH held-outs only → pass raises that register's ceiling one rung →
 pass-with-conditions allowed → records stored where the Automaton can never read
 them → Registry updated.
