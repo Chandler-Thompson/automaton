@@ -202,11 +202,20 @@ repo layout: [graft.md](graft.md).
   World-side (a script where the remote lives — the examiner checks, not the
   student). The Automaton's own session-open check is a demoted **reflex** that
   catches accidents (bad sync, corruption, careless edits); on mismatch it
-  **quenches to WATCH** — drops to the bottom rung and self-suspends everything
-  above it, DRAFT included (interregnum-decay's shape pointed at integrity),
-  ledgers the incident, notifies the creator, awaits re-anchor. An Automaton that
-  cannot verify its own floor does not get to write in its creator's voice either;
-  the rung name is the permission, and the permission here is reading. A fully compromised instance does neither — which is exactly why
+  **quenches** (interregnum-decay's shape pointed at integrity), ledgers the
+  incident, notifies the creator, awaits re-anchor. **How far it quenches is a
+  Charter setting, decided by the creator in Phase 0** — not a value this skill
+  picks for them:
+
+  | Setting | Effect | The argument for it |
+  |---|---|---|
+  | **read-only** (default) | Drops to WATCH; DRAFT, ACT and JUDGE all self-suspend | An Automaton that cannot verify whose floor it is under should not be putting words in its creator's mouth, not even in a draft glanced at and approved |
+  | **read-and-draft** | DRAFT survives; nothing sends | The creator reviews every draft regardless, and a bad file sync should not cost a day's work |
+
+  Acting is off under both — Hands suspend either way. The default is read-only
+  because that is the recoverable failure. What is **not** configurable: it always
+  stops, always ledgers, always notifies, and never decides on its own that the
+  mismatch resolved itself. A fully compromised instance does neither — which is exactly why
   the World-side check exists. Tamper-evident, never tamper-proof.
 - **A moved hash is a task handed to the creator, never a fact in passing.**
   Every legitimate change that moves the contract's hash ends with the

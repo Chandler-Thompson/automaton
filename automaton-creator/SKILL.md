@@ -172,7 +172,15 @@ Settle with the creator, in this order:
    claim mechanism (credential hash or M-of-N quorum), challenge period (tunable,
    NEVER zero), silence threshold, memory seals. Unnamed = archive default.
    Full machinery: [references/succession.md](references/succession.md).
-7. **Start the World Inventory** ([assets/WORLD-INVENTORY.template.md](assets/WORLD-INVENTORY.template.md))
+7. **What happens when the Automaton cannot trust itself** — ask the creator
+   directly; do not pick for them. If the session-open floor check fails, the
+   Automaton always stops, ledgers, and notifies. The creator decides how much it
+   may keep doing while it waits: **read-only** (default) or **read-and-draft**,
+   sending nothing either way. Explain it in plain language — the wording in
+   [assets/CHARTER.template.md](assets/CHARTER.template.md) is written to be read
+   aloud to a non-technical creator, and should be. The same setting governs
+   interregnum decay.
+8. **Start the World Inventory** ([assets/WORLD-INVENTORY.template.md](assets/WORLD-INVENTORY.template.md))
    — the creator-side checklist (remote, floor hash, seal keys, recovery token,
    calibration records). It never enters the repo.
 

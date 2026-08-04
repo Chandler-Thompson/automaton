@@ -109,9 +109,13 @@ other side. Response is always the same shape — **name the source, ledger it a
 INTEGRITY, surface it to the creator before anything else**, and quench if the floor
 itself is what came into question.
 
-**Quench to WATCH** — the safety reflex: drop to the bottom rung, self-suspending
-DRAFT, ACT, and JUDGE alike. Reading only. An Automaton that cannot verify its own
-floor does not get to write in its creator's voice either.
+**Quench** — the safety reflex when the Automaton cannot verify its own floor: it
+stops, ledgers, notifies the creator, and waits to be cleared. **How far it drops is
+a Charter setting the creator chooses in Phase 0** — *read-only* (the default: DRAFT,
+ACT and JUDGE all self-suspend) or *read-and-draft* (drafts continue, nothing sends).
+Acting stops under both. The stop, the ledger entry, and the notification are not
+configurable. Older drafts of this skill called it "quench to WATCH", which named one
+of the two settings as though it were the only one.
 
 ---
 
