@@ -182,3 +182,45 @@ the new file hash, the date, and the steps the creator takes to update the World
 Inventory. It re-surfaces that request at every session open until the creator
 confirms — because until they do, the World-side check is comparing against a stale
 anchor, which is the exact condition the check exists to catch.
+
+---
+
+## 6. The journal fold — one ledger, many sessions
+
+The ledger template defines the write model (assets/LEDGER.template.md, "Concurrent
+sessions"); this section covers what the template leaves deployment-specific. The
+model is adopted from the stoa project (github.com/Chandler-Thompson/stoa,
+docs/PROTOCOL.md), which named it so it could be cited apart from the tool.
+
+### The lock
+
+The fold is the only writer of the monthly file, and it holds a lock for the whole
+stage-commit sequence. What the lock IS depends on where sessions live:
+
+- **One machine, one repo** (the common case): a lockfile — created with the shell's
+  `noclobber` guarantee (`set -o noclobber; echo "$$ $(date -Iseconds) <purpose>" >
+  mind/state/locks/repo.lock`), never `mkdir`, which false-positives on any existing
+  file. Write the pid and timestamp INTO the lock: a leaked lock from a crashed
+  session looks identical to live contention, and the pid is how the next session
+  tells them apart (dead pid → remove, note it in the fold commit; live pid → defer
+  the fold).
+- **Distributed members**: stoa's branch-as-lock — claiming the consolidator role
+  pushes a fresh root commit to a lock branch; an existing branch rejects the push.
+  Use stoa itself at that point rather than reimplementing it.
+
+### Failure cases the recipe must survive
+
+- **Fold interrupted between append and delete:** the next fold de-duplicates by
+  entry header (timestamp + title) before re-appending — entries are idempotent by
+  their headers.
+- **Lock holder died:** dead-pid check above. A lock is never simply deleted on age
+  alone; age plus a dead pid, or age plus no matching activity in `git log`, is the
+  bar.
+- **Journal directory missing:** nothing is pending; sessions recreate it on first
+  entry.
+
+### What this procedure deliberately does not change
+
+Surfacing. Unsurfaced entries are surfaced from journals at session open BEFORE any
+fold is attempted, and a deferred fold defers only the housekeeping — never the
+creator's visibility (floor 1).
