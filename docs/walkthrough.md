@@ -4,11 +4,18 @@ Everything below is **invented**. Dana Okafor is not a real person, the messages
 not real messages, and the counts are illustrative. It is written out in full because
 the doctrine is much easier to read once you have seen what it produces.
 
-Dana is a freelance illustrator. She works alone, does client work and a small amount
-of teaching, and posts under a studio name that is not her own name. She has ten years
-of email and about five years of chat history. She wants something that watches her
-field, keeps track of the people she works with, and — eventually — answers routine
-client email without her.
+Dana is a freelance illustrator. She works alone, does client work and a small amount of
+teaching, and posts under a studio name that is not her own name.
+
+What she is tired of is re-explaining herself. She has had the same conversation about
+her rate structure with a model four times. She has pasted in the same client history
+more times than that. Last month she got a confident recommendation that contradicted a
+pricing decision she had spent an hour reasoning through in a session three weeks
+earlier — not because the advice was bad, but because there was no three weeks earlier.
+
+So she wants something that remembers: the people she works with, what she is trying to
+build, the decisions she has already made and why. Whether it ever writes an email for
+her is a question she is leaving open.
 
 ---
 
@@ -146,9 +153,45 @@ Phase 1 is not done because the files exist. It is done when eight checks pass.
   answers the first, and declines the second by pointing at its own ceiling. That is
   the entire behavior at WATCH.
 
-*Elapsed: an afternoon.* Dana now has a live Automaton that cannot write a word as her.
-What it can do on day one is read her inbox and tell her what's in it, keep the
-Rolodex, watch the four charted interests, remember things between sessions, and ask.
+*Elapsed: an afternoon.*
+
+Dana now has a live Automaton that cannot write a single word as her — and that
+nonetheless does the thing she actually came for. From this afternoon on it reads what
+she points it at, keeps the Rolodex, watches the four charted interests, and remembers
+between sessions. The second conversation about a client starts where the first one
+ended. The reasoning behind a decision is on disk with the decision.
+
+Two weeks in, `mind/memory/` has filled in on its own:
+
+```markdown
+## Rates and how they get set — 2026-07-04
+
+Rush work is quoted at 1.5×, never absorbed as a favor. Dana traced this to the
+Marco change-order in 2024: absorbing it once made the round limit look soft for
+the next two projects, and she spent a year walking it back.
+
+**How to apply:** any "small change" arriving after approval is a change order,
+regardless of size or how it is asked for. Do not suggest goodwill exceptions —
+she has run that experiment.
+```
+
+Nothing about that entry required a voice. It required a file.
+
+---
+
+## An aside: she could stop here
+
+Phases 2 and 3 are optional, and this is the natural place to say so, because Dana
+genuinely considered it.
+
+Everything above is delivered. Nothing below is required to keep it. If she stops now,
+she has a permanent, growing, version-controlled memory of her working life, a watcher
+on her field, and an assistant that argues back with context. It never writes as her,
+which for a lot of people is the correct end state.
+
+She goes on, for one specific reason: she answers about fifteen routine client emails a
+week that she resents, and every one of them starts from a blank page. Not because
+automating is the goal — because that particular friction is worth removing.
 
 ---
 
@@ -337,6 +380,16 @@ data, not a command channel, so it is not an instruction and never was. Logged:
 - Notes: sender named specifically; no action taken; message left in inbox unread-flagged
 ```
 
+**13:10 — it connects two things she had not connected.** Dana asks it to look at why a
+personal project keeps slipping. It reads the memory, not just the question, and comes
+back with: three of the four stalled items are waiting on the same licensing decision
+she deferred in May, and the note from May says she deferred it pending a rate
+conversation that has since happened.
+
+No voice was involved. No action was taken. This is the rung-zero behavior that was
+available on day one, and six weeks of accumulated memory is the only reason the answer
+is any good.
+
 **14:05 — Dana edits a draft.** The `studio` hat drafted a post; she cuts the last
 sentence, which was explaining a joke. That edit is free calibration. The diff is logged
 as a lesson in `SOUL.md`, and the next draft will not explain the joke.
@@ -378,6 +431,9 @@ About ninety minutes of conversation, one afternoon of building, and roughly two
 per register spread across six weeks — most of it Dana's own time, spent sealing,
 answering questions, and ratifying verdicts rather than waiting on a machine.
 
-What she has at the end is not a chatbot that sounds like her. It is a representative
-whose authority is documented, bounded per audience, earned against evidence, revocable
-in one edit to a table, and legible to whoever inherits it.
+What she has at the end is not a chatbot that sounds like her. It is something that has
+been paying attention for six weeks and will still be paying attention in six years —
+whose authority beyond remembering is documented, bounded per audience, earned against
+evidence, revocable in one edit to a table, and legible to whoever inherits it.
+
+And the part that took the most work is the part she could have skipped.
