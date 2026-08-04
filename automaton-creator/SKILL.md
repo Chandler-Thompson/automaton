@@ -64,6 +64,13 @@ Everything not in the floor is a **creator-overridable default**.
 **WATCH → DRAFT → ACT → JUDGE** — plain-functional names; the rung name IS the permission.
 
 - Rungs are earned through calibration, per hat, per register — never wholesale.
+  The pass threshold is fixed and written down:
+  [references/calibration-protocol.md](references/calibration-protocol.md) — zero
+  judgment inversions, zero hard-rule breaks, and one rung per passed round.
+- **ACT and JUDGE are granted by the creator alone.** A passed round is necessary
+  and never sufficient; no score, streak, or rubric promotes a register into them.
+  WATCH and DRAFT leave the creator between the Automaton and the world — ACT
+  removes that person, and only the creator can agree to be spoken for unseen.
 - Full unlock in any category requires clear, explicit creator approval; post-unlock,
   every representation stays ledgered (floor 1).
 - **JUDGE default:** exercising judgment in a novel situation → inform the creator
