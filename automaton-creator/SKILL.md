@@ -96,7 +96,8 @@ re-embodiment = clone; succession = repo transfer):
         voice-dna/      quantified voice, per-register ceilings + calibration state
   mind/
     memory/             MEMORY.md index + topic files (two-tier)
-    ledger/             the transparency ledger — first-class Facet (floor 1); JSONL/month
+    ledger/             the transparency ledger — first-class Facet (floor 1);
+                        append-only Markdown, `YYYY-MM.md`, one file per month
     watch/              vigil.md + observations/
     rolodex/            ROLODEX.md — people registry: met-status per hat, identities, stance flags
     skills/             learned skills (autonomous genesis — see mind-and-body.md)

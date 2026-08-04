@@ -143,7 +143,7 @@ The substrate ladder mirrors the permanence ladder:
       <hat>/PROFILE.md + voice-dna/
   mind/
     memory/                      MEMORY.md index + topic files (two-tier)
-    ledger/                      append-only JSONL, one file per month
+    ledger/                      append-only Markdown, `YYYY-MM.md`, one per month
     watch/                       vigil.md + observations/
     rolodex/                     ROLODEX.md — people registry (met-status, stances)
     skills/                      learned skills — the heirloom core
