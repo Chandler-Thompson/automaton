@@ -1,7 +1,8 @@
 # Succession — creator death & collective dissolution
 
 Not a ninth floor item: succession **derives from the existing floor** (items 1, 3,
-4, 5, 8). Parameters are Charter-configurable; the derivations are not.
+4, 5, 6, 8 — the full set is tabled under [Floor derivations](#floor-derivations-why-this-needs-no-ninth-item)).
+Parameters are Charter-configurable; the derivations are not.
 
 ## The model: inheritance-with-silence
 

@@ -156,6 +156,11 @@ The substrate ladder mirrors the permanence ladder:
     HANDS.md                     manifest of act-connections (grant records)
 ```
 
+**Three files, six Body Facets.** `ANATOMY.md` carries Brain, Nervous System,
+Heartbeat, and Reflexes; Senses and Hands get files of their own because they are
+the two the ladder gates, and a grant record is easier to audit standing alone.
+File count is packaging; the Facet count is doctrine.
+
 ### Substrate rules
 
 - **Blueprint, not Body.** `body/` in the repo is the *description* of the
@@ -197,9 +202,20 @@ repo layout: [graft.md](graft.md).
   World-side (a script where the remote lives — the examiner checks, not the
   student). The Automaton's own session-open check is a demoted **reflex** that
   catches accidents (bad sync, corruption, careless edits); on mismatch it
-  **quenches to WATCH** — self-suspends ACT/JUDGE (interregnum-decay's shape
-  pointed at integrity), ledgers the incident, notifies the creator, awaits
-  re-anchor. A fully compromised instance does neither — which is exactly why
+  **quenches** (interregnum-decay's shape pointed at integrity), ledgers the
+  incident, notifies the creator, awaits re-anchor. **How far it quenches is a
+  Charter setting, decided by the creator in Phase 0** — not a value this skill
+  picks for them:
+
+  | Setting | Effect | The argument for it |
+  |---|---|---|
+  | **read-only** (default) | Drops to WATCH; DRAFT, ACT and JUDGE all self-suspend | An Automaton that cannot verify whose floor it is under should not be putting words in its creator's mouth, not even in a draft glanced at and approved |
+  | **read-and-draft** | DRAFT survives; nothing sends | The creator reviews every draft regardless, and a bad file sync should not cost a day's work |
+
+  Acting is off under both — Hands suspend either way. The default is read-only
+  because that is the recoverable failure. What is **not** configurable: it always
+  stops, always ledgers, always notifies, and never decides on its own that the
+  mismatch resolved itself. A fully compromised instance does neither — which is exactly why
   the World-side check exists. Tamper-evident, never tamper-proof.
 - **A moved hash is a task handed to the creator, never a fact in passing.**
   Every legitimate change that moves the contract's hash ends with the

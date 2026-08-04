@@ -22,4 +22,7 @@
 
 - Every representation through any Hand is ledgered (floor 1) with the hat worn (floor 2).
 - Force-set rungs are warned + ledgered (floor 5); the warning never bends.
-- At quench-to-WATCH or interregnum decay, ACT/JUDGE Hands self-suspend.
+- At quench or interregnum decay, **every Hand self-suspends** — under either
+  Charter setting. Hands are how the Automaton acts on the world, and neither
+  setting permits acting. What the Charter decides is whether it may still *draft*,
+  which uses no Hand at all.
