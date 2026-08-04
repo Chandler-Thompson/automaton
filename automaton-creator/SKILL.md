@@ -68,11 +68,22 @@ shadow-test, integrity incident, graft, quench — is defined once in
 [references/glossary.md](references/glossary.md). Read it before the first phase if any
 word below is doing work you cannot see.
 
+Four steps in this skill were doctrine without a procedure — sealing, deploy, the
+extractor, and the World-side integrity check. They now have one:
+[references/procedures.md](references/procedures.md).
+
 ## The Autonomy Ladder (earned, per hat, per register)
 
 **WATCH → DRAFT → ACT → JUDGE** — plain-functional names; the rung name IS the permission.
 
 - Rungs are earned through calibration, per hat, per register — never wholesale.
+  The pass threshold is fixed and written down:
+  [references/calibration-protocol.md](references/calibration-protocol.md) — zero
+  judgment inversions, zero hard-rule breaks, and one rung per passed round.
+- **ACT and JUDGE are granted by the creator alone.** A passed round is necessary
+  and never sufficient; no score, streak, or rubric promotes a register into them.
+  WATCH and DRAFT leave the creator between the Automaton and the world — ACT
+  removes that person, and only the creator can agree to be spoken for unseen.
 - Full unlock in any category requires clear, explicit creator approval; post-unlock,
   every representation stays ledgered (floor 1).
 - **JUDGE default:** exercising judgment in a novel situation → inform the creator
@@ -105,7 +116,8 @@ re-embodiment = clone; succession = repo transfer):
         voice-dna/      quantified voice, per-register ceilings + calibration state
   mind/
     memory/             MEMORY.md index + topic files (two-tier)
-    ledger/             the transparency ledger — first-class Facet (floor 1); JSONL/month
+    ledger/             the transparency ledger — first-class Facet (floor 1);
+                        append-only Markdown, `YYYY-MM.md`, one file per month
     watch/              vigil.md + observations/
     rolodex/            ROLODEX.md — people registry: met-status per hat, identities, stance flags
     skills/             learned skills (autonomous genesis — see mind-and-body.md)
@@ -236,14 +248,23 @@ applies from birth — `soul/` commits are always self-contained):
   an Automaton without this file cannot check its own ceilings.
 - `soul/representations/<hat>/PROFILE.md` per hat from
   [assets/PROFILE.template.md](assets/PROFILE.template.md).
+- `soul/representations/<hat>/voice-dna/<register>.md` per register from
+  [assets/VOICE-DNA.template.md](assets/VOICE-DNA.template.md) — **one file per
+  register, born UNMEASURED.** A register with no corpus still gets a file; empty
+  counts are an honest starting state and the thing active elicitation aims at.
 - `mind/ledger/` seeded from [assets/LEDGER.template.md](assets/LEDGER.template.md);
-  `mind/memory/MEMORY.md` seeded as an empty index; `mind/rolodex/ROLODEX.md`
+  `mind/memory/MEMORY.md` from [assets/MEMORY.template.md](assets/MEMORY.template.md)
+  (index only, no entries yet); `mind/rolodex/ROLODEX.md`
   seeded from [assets/ROLODEX.template.md](assets/ROLODEX.template.md) (the
-  creator row filled, everything else empty); `mind/watch/vigil.md`,
-  `mind/skills/`, `mind/state/`, `mind/seals/` seeded empty.
+  creator row filled, everything else empty); `mind/watch/vigil.md` from
+  [assets/VIGIL.template.md](assets/VIGIL.template.md) (empty is correct —
+  reflection is earned by living); `mind/skills/`, `mind/state/`, `mind/seals/`
+  seeded empty.
 - `body/ANATOMY.md`, `body/SENSES.md` (incl. the two command channels + recovery
   hash), `body/HANDS.md` from their templates — blueprint only; then **deploy**:
   install the Soul copy into the harness, wire the Senses/Hands, rebuild Reflexes.
+  Step by step, including the alias-vs-source-of-truth trap:
+  [references/procedures.md](references/procedures.md).
 - Set the creator-controlled **remote**; complete the **World Inventory** together.
 
 #### Phase 1 acceptance check — run it before calling the build done
@@ -295,7 +316,8 @@ Discipline detail: [references/corpus-and-voice.md](references/corpus-and-voice.
    outside the automaton folder, unreadable by the Automaton. An exam the student
    has seen proves nothing.
 3. **Author an extractor for THIS corpus** (never a generic tool) — profile only
-   the creator's own messages; read others' only for context.
+   the creator's own messages; read others' only for context. Ten-step procedure:
+   [references/procedures.md](references/procedures.md).
 4. Produce **quantified voice-dna**: counts not vibes; per-medium, per-era,
    per-register splits; negative markers (what the creator never does); hard rules.
 

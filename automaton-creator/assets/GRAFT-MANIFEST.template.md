@@ -3,7 +3,8 @@
 <!-- MASTER COPY lives in the creator's World (never in canon's repo).
      A deployed copy ships in the graft at graft/MANIFEST.md.
      This file IS the graft definition: what crosses, in what form, and the
-     hashes that make the deployment verifiable. See references/graft.md. -->
+     hashes that make the deployment verifiable.
+     Full doctrine: the `automaton-creator` skill, references/graft.md. -->
 
 ## Host & sovereign
 
@@ -32,7 +33,7 @@ intimate registers, seal-marked anything) never ships — seal marks = HOME-ONLY
 | soul/CREATOR.md | GRAFTABLE-REDACTED | trimmed: {{sections excluded}} |
 | soul/representations/{{hat}}/ | GRAFTABLE-REDACTED | {{voice-dna minus quoted private corpus}} |
 | mind/memory/, mind/ledger/, mind/watch/ | HOME-ONLY | never cross |
-| mind/seals/ | HOME-ONLY | by construction — grafts never seal (G8) |
+| mind/seals/ | HOME-ONLY | by construction — grafts never seal; an urge to seal here means misfiled content |
 | {{...}} | {{...}} | {{...}} |
 
 ## Hash record (the examiner's ledger)
