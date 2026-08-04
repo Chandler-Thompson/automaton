@@ -54,9 +54,12 @@ automaton-creator/
   SKILL.md              the process: floor, ladder, anatomy, five phases, hard rules
   references/           hard-floor · mind-and-body · corpus-and-voice ·
                         calibration-protocol · succession · graft
-  assets/               templates for every file an Automaton is born with,
-                        incl. the creator-side World Inventory, the Graft
-                        Manifest, and both halves of the Crossing Protocol
+  assets/               a template for every file an Automaton is born with —
+                        contract, soul, creator, charter, registry, hat profile,
+                        voice-dna, memory index, ledger, rolodex, vigil, and the
+                        three Body manifests — plus the creator-side World
+                        Inventory, the Graft Manifest, and both halves of the
+                        Crossing Protocol
 ```
 
 ## Provenance

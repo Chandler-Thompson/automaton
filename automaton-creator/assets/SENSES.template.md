@@ -39,7 +39,8 @@ notification on every known channel. Recovery is loud by design.
 
 ## Watcher self-extensions
 
-<!-- The Watcher may self-extend READING scope (Day-1 lock). Every extension:
+<!-- The Watcher may self-extend READING scope -- the sole autonomy carve-out in
+     the floor (item 3). Every extension:
      one atomic commit here + a ledger entry. Never act/represent scope. -->
 
 | Date | Sense added | Why | Ledger ref |

@@ -18,7 +18,10 @@
 | **Calibration records** (held-outs, reproductions, judge analyses, verdicts — the Automaton must NEVER read these; sealed-but-kept, opening conditions per Charter) | {{...}} | ☐ |
 | **Sealed held-outs** awaiting future gates | {{...}} | ☐ |
 
-## Per graft, if any (see references/graft.md)
+## Per graft, if any
+
+<!-- Graft doctrine lives in the `automaton-creator` skill, references/graft.md --
+     not in your Automaton's repo and not in this file. -->
 
 | Item | Where you keep it | Set up? |
 |---|---|---|

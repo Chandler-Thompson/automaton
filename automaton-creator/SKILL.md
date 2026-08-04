@@ -188,11 +188,18 @@ applies from birth — `soul/` commits are always self-contained):
   `soul/charter/CHARTER.md` from Phase 0.
 - `soul/representations/<hat>/PROFILE.md` per hat from
   [assets/PROFILE.template.md](assets/PROFILE.template.md).
+- `soul/representations/<hat>/voice-dna/<register>.md` per register from
+  [assets/VOICE-DNA.template.md](assets/VOICE-DNA.template.md) — **one file per
+  register, born UNMEASURED.** A register with no corpus still gets a file; empty
+  counts are an honest starting state and the thing active elicitation aims at.
 - `mind/ledger/` seeded from [assets/LEDGER.template.md](assets/LEDGER.template.md);
-  `mind/memory/MEMORY.md` seeded as an empty index; `mind/rolodex/ROLODEX.md`
+  `mind/memory/MEMORY.md` from [assets/MEMORY.template.md](assets/MEMORY.template.md)
+  (index only, no entries yet); `mind/rolodex/ROLODEX.md`
   seeded from [assets/ROLODEX.template.md](assets/ROLODEX.template.md) (the
-  creator row filled, everything else empty); `mind/watch/vigil.md`,
-  `mind/skills/`, `mind/state/`, `mind/seals/` seeded empty.
+  creator row filled, everything else empty); `mind/watch/vigil.md` from
+  [assets/VIGIL.template.md](assets/VIGIL.template.md) (empty is correct —
+  reflection is earned by living); `mind/skills/`, `mind/state/`, `mind/seals/`
+  seeded empty.
 - `body/ANATOMY.md`, `body/SENSES.md` (incl. the two command channels + recovery
   hash), `body/HANDS.md` from their templates — blueprint only; then **deploy**:
   install the Soul copy into the harness, wire the Senses/Hands, rebuild Reflexes.
