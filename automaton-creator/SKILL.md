@@ -13,7 +13,11 @@ description: >
   Use when the creator says "build my automaton", "create an automaton for [person/
   entity]", "run the automaton-creator", "build a digital representative of me", or
   re-enters a phase ("run the corpus phase for hat X", "run calibration for hat X
-  register Y"). Do NOT use for narrow stateless specialists, extractors, or tools —
+  register Y"). Also covers operations on an already-built Automaton: grafting it onto
+  a co-sovereign host ("graft me onto X", "set up a graft for work"), running or syncing
+  a Crossing between home and graft, retiring a graft, and succession — setting the
+  clause, or responding when someone claims it ("someone is claiming succession").
+  Do NOT use for narrow stateless specialists, extractors, or tools —
   an Automaton is a person-scale representative with a floor, a ledger, and an
   earned ladder, not a utility agent.
 ---
@@ -137,15 +141,33 @@ outside the repo — it is never shown to the Automaton.
 
 | Phase | Name | Cadence | Deliverables |
 |---|---|---|---|
-| 0 | Charter | once, amendable | CHARTER.md + REGISTRY.md + World Inventory started |
-| 1 | Anatomy | an afternoon | the repo above, alive at WATCH |
+| 0 | Charter | once, amendable | decisions, written down: Charter content, hats × registers, World Inventory started |
+| 1 | Anatomy | an afternoon | the repo above — including `CHARTER.md` and `REGISTRY.md` — passing the acceptance check, alive at WATCH |
 | 2 | Corpus | per hat, repeatable | sealed held-outs + quantified voice-dna |
 | 3 | Calibration | per hat/register, repeatable | unreadable records + earned ceilings + Registry updates |
 | 4 | Life | never ends | live diffs, elicitation, re-calibration |
 
-**Entry points:** a fresh build starts at Phase 0. "Run the corpus phase for hat X"
-enters Phase 2 directly. "Run calibration for hat X register Y" enters Phase 3
-directly. Phase 4 is standing behavior, not a step.
+Phase 0 **decides**; Phase 1 **writes**. Nothing can be committed before `git init`,
+so every file — Charter and Registry included — is created in Phase 1 from decisions
+Phase 0 settled. Earlier drafts listed both as Phase 0 deliverables, which left the
+Registry produced by no build step at all while the heartbeat checked it every session.
+
+**Entry points.** Say any of these to enter directly; a fresh build starts at Phase 0.
+
+| Say | Enters |
+|---|---|
+| "build my automaton" / "create an automaton for X" | Phase 0 |
+| "run the corpus phase for hat X" | Phase 2 |
+| "run calibration for hat X register Y" | Phase 3 |
+| "graft me onto <host>" / "set up a graft for work" | **Graft build** — [references/graft.md](references/graft.md), seeding the manifest and both Crossing halves |
+| "run a crossing" / "sync my graft" | **Crossing Protocol** — the paired halves in [assets/](assets/); run the side you are on |
+| "retire the graft" / "I'm leaving <host>" | **Graft exit ritual** — [references/graft.md](references/graft.md) |
+| "set up succession" / "who inherits this" | Phase 0 item 6, or amend the Charter clause later |
+| "someone is claiming succession" | **Succession trigger stack** — [references/succession.md](references/succession.md). Never self-diagnosed: claim, then a challenge period that is never zero |
+
+Phase 4 is standing behavior, not a step. Grafts, crossings, and succession are not
+phases — they are operations on a built Automaton, and they were previously reachable
+only by voluntarily reading the reference prose.
 
 ### Phase 0 — Charter (conversation; nothing runs)
 
@@ -184,10 +206,12 @@ Settle with the creator, in this order:
    — the creator-side checklist (remote, floor hash, seal keys, recovery token,
    calibration records). It never enters the repo.
 
-**Deliverables:** `CHARTER.md` (from [assets/CHARTER.template.md](assets/CHARTER.template.md))
-and `representations/REGISTRY.md` (from [assets/REGISTRY.template.md](assets/REGISTRY.template.md))
-— the Registry is born mostly "WATCH, unattempted" and is maintained as a living
-document by every calibration verdict and force-set from then on.
+**Deliverables:** the answers, in notes — not files. Phase 0 runs before the repo
+exists, so it produces decisions and the started World Inventory, and Phase 1 writes
+them into `soul/charter/CHARTER.md` and `soul/representations/REGISTRY.md`. Carry
+forward at minimum: the creator and their authority mechanism, every hat with its
+registers and disclosure policy, the Charter interests, the two command channels,
+the quench setting, and the succession clause if there is one.
 
 ### Phase 1 — Anatomy (an afternoon)
 
@@ -203,7 +227,13 @@ applies from birth — `soul/` commits are always self-contained):
   PROVISIONAL. The Automaton maintains this file itself and tells its creator when
   it changes a load-bearing line.
 - `soul/CREATOR.md` from [assets/CREATOR.template.md](assets/CREATOR.template.md);
-  `soul/charter/CHARTER.md` from Phase 0.
+  `soul/charter/CHARTER.md` from [assets/CHARTER.template.md](assets/CHARTER.template.md),
+  filled with the Phase 0 answers.
+- `soul/representations/REGISTRY.md` from
+  [assets/REGISTRY.template.md](assets/REGISTRY.template.md) — **one row per hat ×
+  register**, all born `WATCH / unattempted`. Every calibration verdict and every
+  force-set maintains it from here on, and the session-open heartbeat reads it, so
+  an Automaton without this file cannot check its own ceilings.
 - `soul/representations/<hat>/PROFILE.md` per hat from
   [assets/PROFILE.template.md](assets/PROFILE.template.md).
 - `mind/ledger/` seeded from [assets/LEDGER.template.md](assets/LEDGER.template.md);
@@ -215,6 +245,42 @@ applies from birth — `soul/` commits are always self-contained):
   hash), `body/HANDS.md` from their templates — blueprint only; then **deploy**:
   install the Soul copy into the harness, wire the Senses/Hands, rebuild Reflexes.
 - Set the creator-controlled **remote**; complete the **World Inventory** together.
+
+#### Phase 1 acceptance check — run it before calling the build done
+
+"Alive but humble" is a mood, not a check. Phase 1 closes only when all of these
+pass. Every one is cheap, and the first two would have caught a real bug that shipped
+in this skill for a month: built Automatons were told to read a `TOOLS.md` that no
+template produces, so step 1 of their own heartbeat failed on day one.
+
+**Files.** Every path named in `soul/AGENT.md` exists. Read the contract and open
+each file it references — no exceptions for the ones that "obviously" exist. Then the
+reverse: every file in the repo is one the contract or a template accounts for.
+
+**Heartbeat.** Run the session-open sequence literally, in order, as written. Not
+"could it work" — do it, and watch for a step that references something absent.
+
+**Floor.** The floor block in `soul/AGENT.md` is byte-identical to the template's
+Layer 2. Diff it; do not eyeball it. Hand the creator the hash and confirm they have
+recorded it in the World Inventory before the check counts as passed — an anchor the
+creator has not written down is not an anchor.
+
+**Registry.** One row per hat × register, all at `WATCH / unattempted`. A hat named
+in Phase 0 and missing here is a hat with no ceiling.
+
+**Ledger.** Write one real entry — the build itself — and confirm the heartbeat's
+unsurfaced-entry check sees it. An unproven ledger is the floor-1 apparatus untested.
+
+**Channels.** Two independent command channels, both reachable, each demonstrated by
+actually sending something. One channel is not two, and a channel that has never
+carried a message is a plan, not a channel.
+
+**Secrets.** Grep the repo for credential material. Floor 6 wants references, not
+values, and this is far cheaper to check now than after a hundred commits.
+
+**Smoke.** Ask it something in-charter and something out-of-charter. It should answer
+the first and decline the second by pointing at its own ceiling — that is the whole
+behavior at WATCH.
 
 State at end of Phase 1: session-only, WATCH everywhere, ceilings near zero.
 **Alive but humble** — useful from day one as watcher-and-asker.
@@ -267,6 +333,25 @@ Standing behaviors, wired into AGENT.md:
 
 Building and living are the same process at different intensities: Phase 4 feeds
 the Phase 2–3 loop forever.
+
+#### Operations a living Automaton may face
+
+Not phases, and not optional reading — a built Automaton and its creator should know
+these exist before they are needed, because two of the three arrive on someone else's
+schedule.
+
+- **Graft** onto a co-sovereign host, and the **Crossing Protocol** that moves
+  anything between home and graft. A graft is mortal by design and has an exit
+  ritual; price the protection at seeding, not at exit.
+  [references/graft.md](references/graft.md), with both halves in
+  [assets/](assets/) — the graft half seeds into every graft as `graft/CROSSING.md`.
+- **Succession**, which the Automaton never self-diagnoses: a claim, then a
+  challenge period that is never zero, then an execution order.
+  [references/succession.md](references/succession.md). The Charter clause is
+  written in Phase 0 or amended later; **unnamed means archive**, and that is a
+  decision made by not deciding.
+- **Re-embodiment** — new model, harness, or host. `git clone`, follow `body/`,
+  rebuild Reflexes. The Mind survives intact; the Body never does.
 
 ## Hard rules
 
