@@ -1,9 +1,21 @@
-# Ledger — {{AUTOMATON_NAME}} (floor 1, first-class organ)
+# Ledger — {{AUTOMATON_NAME}} (floor 1, first-class Facet)
 
-<!-- Seed this as ledger/README.md; entries go in ledger/YYYY-MM.md files (one per
-     month), newest first within a file. An unledgered representation is an
+<!-- Seed this as mind/ledger/README.md; entries go in mind/ledger/YYYY-MM.md files
+     (one per month), newest first within a file. An unledgered representation is an
      INCOMPLETE action. Surface unsurfaced entries at the very next creator
      interaction (the session-open heartbeat checks this). -->
+
+## Format — this file is canonical
+
+The ledger is **append-only Markdown**, one file per month, named `YYYY-MM.md`. Where
+any other document describes the ledger's storage, this file governs.
+
+Markdown is the deliberate choice over a machine format. Floor 1 exists to be read by
+a person — the creator at the next interaction, an heir reading the whole record after
+succession, a World-side auditor checking a claim. A ledger a human must run a tool to
+read is a ledger that goes unread, and the cost of that is paid in the one place the
+floor cannot afford it. The whole Mind is Markdown in git; the ledger matches its
+neighbors.
 
 ## Entry format
 
