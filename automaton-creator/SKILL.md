@@ -59,6 +59,10 @@ every AGENT.md (the template already contains it).
 
 Everything not in the floor is a **creator-overridable default**.
 
+Four steps in this skill were doctrine without a procedure — sealing, deploy, the
+extractor, and the World-side integrity check. They now have one:
+[references/procedures.md](references/procedures.md).
+
 ## The Autonomy Ladder (earned, per hat, per register)
 
 **WATCH → DRAFT → ACT → JUDGE** — plain-functional names; the rung name IS the permission.
@@ -196,6 +200,8 @@ applies from birth — `soul/` commits are always self-contained):
 - `body/ANATOMY.md`, `body/SENSES.md` (incl. the two command channels + recovery
   hash), `body/HANDS.md` from their templates — blueprint only; then **deploy**:
   install the Soul copy into the harness, wire the Senses/Hands, rebuild Reflexes.
+  Step by step, including the alias-vs-source-of-truth trap:
+  [references/procedures.md](references/procedures.md).
 - Set the creator-controlled **remote**; complete the **World Inventory** together.
 
 State at end of Phase 1: session-only, WATCH everywhere, ceilings near zero.
@@ -211,7 +217,8 @@ Discipline detail: [references/corpus-and-voice.md](references/corpus-and-voice.
    outside the automaton folder, unreadable by the Automaton. An exam the student
    has seen proves nothing.
 3. **Author an extractor for THIS corpus** (never a generic tool) — profile only
-   the creator's own messages; read others' only for context.
+   the creator's own messages; read others' only for context. Ten-step procedure:
+   [references/procedures.md](references/procedures.md).
 4. Produce **quantified voice-dna**: counts not vibes; per-medium, per-era,
    per-register splits; negative markers (what the creator never does); hard rules.
 

@@ -40,10 +40,18 @@
 - **Claim mechanism:** {{credential (hash: {{HASH}}, secret held via {{will/envelope/PM emergency access}}) | quorum {{M}}-of-{{N}}: {{NAMES}}}}
 - **Challenge period:** {{X days — tunable, NEVER zero}}
 - **Silence-lapse threshold (notify-and-invite only):** {{e.g., 180 days}}
-- **Memory seals (sealed-but-kept; encrypted at succession):**
-  | Sealed content (file/topic) | Opening condition |
-  |---|---|
-  | {{e.g., memory/topic_x.md}} | {{e.g., "open after 50 years" / "grandchildren at 18" / "never"}} |
+- **Memory seals (sealed-but-kept; encrypted AT WRITE, never later):**
+
+  <!-- Marking a topic here is what causes it to be encrypted the first time it is
+       written. Git never forgets: encrypting a file already committed in plaintext
+       seals nothing, because the plaintext stays in history for every future clone
+       — including the successor it was sealed against. Sealing later is already too
+       late, and the honest answer at that point is a history rewrite, not a seal.
+       Procedure: the `automaton-creator` skill, references/procedures.md. -->
+
+  | Sealed content (file/topic) | Opening condition | Sealed from first write? |
+  |---|---|---|
+  | {{e.g., memory/topic_x.md}} | {{e.g., "open after 50 years" / "grandchildren at 18" / "never"}} | {{yes — or NO, and say why}} |
 - **Reminder of the derivations:** voice hats silence forever (floor 8); ledger
   passes whole; external evidence corroborates a claim, never constitutes one
   (floor 4); the whole event is ledgered (floor 1).
