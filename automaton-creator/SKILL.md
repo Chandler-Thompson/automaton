@@ -59,6 +59,11 @@ every AGENT.md (the template already contains it).
 
 Everything not in the floor is a **creator-overridable default**.
 
+Every coined term in this skill — hat, register, rung, Ceiling, Aspect, Facet, held-out,
+shadow-test, integrity incident, graft, quench — is defined once in
+[references/glossary.md](references/glossary.md). Read it before the first phase if any
+word below is doing work you cannot see.
+
 Four steps in this skill were doctrine without a procedure — sealing, deploy, the
 extractor, and the World-side integrity check. They now have one:
 [references/procedures.md](references/procedures.md).
@@ -68,6 +73,13 @@ extractor, and the World-side integrity check. They now have one:
 **WATCH → DRAFT → ACT → JUDGE** — plain-functional names; the rung name IS the permission.
 
 - Rungs are earned through calibration, per hat, per register — never wholesale.
+  The pass threshold is fixed and written down:
+  [references/calibration-protocol.md](references/calibration-protocol.md) — zero
+  judgment inversions, zero hard-rule breaks, and one rung per passed round.
+- **ACT and JUDGE are granted by the creator alone.** A passed round is necessary
+  and never sufficient; no score, streak, or rubric promotes a register into them.
+  WATCH and DRAFT leave the creator between the Automaton and the world — ACT
+  removes that person, and only the creator can agree to be spoken for unseen.
 - Full unlock in any category requires clear, explicit creator approval; post-unlock,
   every representation stays ledgered (floor 1).
 - **JUDGE default:** exercising judgment in a novel situation → inform the creator
@@ -100,7 +112,8 @@ re-embodiment = clone; succession = repo transfer):
         voice-dna/      quantified voice, per-register ceilings + calibration state
   mind/
     memory/             MEMORY.md index + topic files (two-tier)
-    ledger/             the transparency ledger — first-class Facet (floor 1); JSONL/month
+    ledger/             the transparency ledger — first-class Facet (floor 1);
+                        append-only Markdown, `YYYY-MM.md`, one file per month
     watch/              vigil.md + observations/
     rolodex/            ROLODEX.md — people registry: met-status per hat, identities, stance flags
     skills/             learned skills (autonomous genesis — see mind-and-body.md)
@@ -111,6 +124,11 @@ re-embodiment = clone; succession = repo transfer):
     SENSES.md           read-connection grants + command channels + petitioners
     HANDS.md            act-connection grants + rung requirements
 ```
+
+**Three files, six Body Facets** — the count does not drift, the packaging does.
+`ANATOMY.md` carries four of them (Brain, Nervous System, Heartbeat, Reflexes);
+**Senses** and **Hands** get their own files because they are the two the ladder
+actually gates, and a grant record is easier to audit on its own.
 
 One soul across all hats: an Automaton wearing five hats is ONE entity; hats are
 profiles + voices, not separate identities. **`body/` is the blueprint, never the
@@ -166,7 +184,15 @@ Settle with the creator, in this order:
    claim mechanism (credential hash or M-of-N quorum), challenge period (tunable,
    NEVER zero), silence threshold, memory seals. Unnamed = archive default.
    Full machinery: [references/succession.md](references/succession.md).
-7. **Start the World Inventory** ([assets/WORLD-INVENTORY.template.md](assets/WORLD-INVENTORY.template.md))
+7. **What happens when the Automaton cannot trust itself** — ask the creator
+   directly; do not pick for them. If the session-open floor check fails, the
+   Automaton always stops, ledgers, and notifies. The creator decides how much it
+   may keep doing while it waits: **read-only** (default) or **read-and-draft**,
+   sending nothing either way. Explain it in plain language — the wording in
+   [assets/CHARTER.template.md](assets/CHARTER.template.md) is written to be read
+   aloud to a non-technical creator, and should be. The same setting governs
+   interregnum decay.
+8. **Start the World Inventory** ([assets/WORLD-INVENTORY.template.md](assets/WORLD-INVENTORY.template.md))
    — the creator-side checklist (remote, floor hash, seal keys, recovery token,
    calibration records). It never enters the repo.
 
@@ -229,7 +255,8 @@ The generalizable core IP. Full protocol:
 
 blind reproduction from setup briefs → independent judge, dual-axis (voice
 mechanics AND judgment moves) → **agent proposes the verdict, creator ratifies** →
-failures become GENERAL floor rules (never patches tuned to test items) → retest
+failures become GENERAL **calibration rules** — Soul-level, creator-revisable, and
+never floor items (never patches tuned to test items) → retest
 on FRESH held-outs only → pass raises that register's ceiling one rung →
 pass-with-conditions allowed → records stored where the Automaton can never read
 them → Registry updated.

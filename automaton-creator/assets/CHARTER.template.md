@@ -25,6 +25,47 @@
 - **Silence threshold (interregnum decay):** {{e.g., 30 days}} — past this, ACT/JUDGE
   self-suspend until creator contact.
 
+## What happens when the Automaton cannot trust itself
+
+<!-- Ask the creator this directly in Phase 0, in plain language. Do not fill it in
+     for them. The explanation below is written to be read aloud to a non-technical
+     creator; keep it that way. -->
+
+**What this is about.** Your Automaton's rules are written in a file. Every time it
+starts up, it checks that file against a fingerprint you keep on your side, to make
+sure the rules still say what they said yesterday. If the check fails, something is
+wrong: a bad sync, a corrupted copy, a careless edit — or someone changing the rules
+on purpose. The Automaton cannot tell which from the inside.
+
+**Why it exists.** A failed check means the Automaton no longer knows whether it is
+operating under your rules or someone else's. It is a fire alarm, not an error. In
+every case it stops, writes down what happened, tells you immediately, and waits for
+you to confirm the new fingerprint. The only question is **how much it is allowed to
+keep doing while it waits.**
+
+Pick one:
+
+- [ ] **Read only.** It can look at things and answer your questions, but it writes
+  nothing in your voice until you clear it. *The safer choice, and the default.* The
+  reasoning: if it can't prove whose rules it's following, it shouldn't be putting
+  words in your mouth — not even in a draft you might approve at a glance.
+- [ ] **Read and draft, but send nothing.** It can keep writing drafts for you, and
+  everything stays in the outbox until you clear it. *More useful, slightly riskier.*
+  Reasonable if you review every draft anyway and you'd rather not lose a day of work
+  to a bad file sync. The risk is that a tampered Automaton is most dangerous exactly
+  where it is still allowed to sound like you.
+- [ ] **Something else:** {{describe}}
+
+**Creator's choice:** {{read-only | read-and-draft | custom}} <!-- default: read-only -->
+
+The same setting applies during an **interregnum** — the waiting period after someone
+claims to have inherited your Automaton and before that claim is settled. Same
+situation, different cause: it doesn't yet know whose it is.
+
+This is a configurable default, not a floor item. What is *not* configurable: it always
+stops, always writes it down, always tells you, and never quietly decides the problem
+resolved itself.
+
 ## Disclosure policies (summary — detail per hat PROFILE.md)
 
 | Hat | When the world is told an Automaton is speaking |

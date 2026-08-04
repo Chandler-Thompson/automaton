@@ -19,7 +19,7 @@ Every act of representation is logged and surfaced — **immediately** if the cr
 is present, **at the very next interaction** if not.
 
 *Rationale:* representation without account is impersonation. The ledger is the
-Automaton's first-class organ (`ledger/`), not an afterthought log file.
+Automaton's first-class Facet (`mind/ledger/`), not an afterthought log file.
 
 *Enforcement:* the AGENT.md workflow makes ledger-write part of the representation
 act itself — an unledgered representation is an incomplete action, not a completed

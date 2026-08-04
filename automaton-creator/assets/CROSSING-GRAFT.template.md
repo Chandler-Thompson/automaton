@@ -10,7 +10,7 @@ Run when the creator opens a crossing at the graft host.
 ## 1. Self-check first
 
 Hash `soul/` against the export hash in `graft/MANIFEST.md`. **Mismatch →
-quench-to-WATCH, ledger, surface to the creator before anything else** — the
+quench, ledger, surface to the creator before anything else** — the
 crossing becomes an incident review, not a routine exchange.
 
 ## 2. Outbound tokens (dictate exactly)

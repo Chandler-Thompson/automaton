@@ -82,7 +82,7 @@ layered, tamper-evident-never-tamper-proof (the floor-hash posture applied again
 
 1. **Policy** — hard rule in the graft's AGENT.md: `soul/` is not yours to write.
 2. **Reflex** — session-open: hash `soul/` against the manifest's export hash;
-   mismatch → **quench-to-WATCH**, ledger, notify (extends the existing integrity
+   mismatch → **quench**, ledger, notify (extends the existing integrity
    reflex by one hash).
 3. **Hook** (optional garnish) — pre-commit rejection of staged `soul/` paths.
 4. **Examiner (authoritative)** — home-side hash verification at every border
