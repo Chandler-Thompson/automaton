@@ -7,7 +7,7 @@ the doctrine is much easier to read once you have seen what it produces.
 Dana is a freelance illustrator. She works alone, does client work and a small amount of
 teaching, and posts under a studio name that is not her own name.
 
-What she is tired of is re-explaining herself. She has had the same conversation about
+What she is tired of is re-explaining herself to AI. She has had the same conversation about
 her rate structure with a model four times. She has pasted in the same client history
 more times than that. Last month she got a confident recommendation that contradicted a
 pricing decision she had spent an hour reasoning through in a session three weeks

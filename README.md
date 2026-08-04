@@ -26,9 +26,9 @@ being useful to you keeps being useful only in the shallow way — it can answer
 question in front of it, and it can never notice that this question is the third time
 this month the same constraint has bitten you.
 
-An Automaton is the fix, and the fix is boring: **write it down, in files, in git, and
-read them at the start of every session.** What accumulates is the thing you have never
-been able to hand a model before — continuity.
+An Automaton is the fix, and the fix is boring: **it writes things down, in files, in
+git, and reads them selectively at the start of every session.** What accumulates is the
+thing you have never been able to hand a model before — continuity.
 
 ## What it remembers
 
@@ -332,17 +332,32 @@ claim into a permission. Full protocol:
 
 ## Three ways an Automaton moves
 
-- **Re-embodiment** — new model, new harness, new machine. `git clone`, follow `body/`,
-  rebuild. The Mind survives intact; the Body never does, and is never authoritative.
-  This is the one that makes the memory durable: nothing you have accumulated is
-  attached to a vendor or a machine.
+- **Re-embodiment** — new model, new harness, new machine. You `git clone` **your
+  Automaton's own private repo** — not this creator skill, which only ever builds one —
+  then follow `body/` and rebuild. Because the clone carries `soul/` and `mind/` with
+  it, everything it is and everything it knows moves in one operation, with its history
+  intact. The Mind survives; the Body never does, and is never authoritative. This is
+  what makes the memory durable: nothing you have accumulated is attached to a vendor,
+  a model, or a machine.
 - **Graft** — deployment onto a **co-sovereign host**: an employer or client who may
-  legitimately read everything on their own side. A redacted fresh export, never shared
-  history; its `soul/` stays byte-identical to what you exported and is verifiable with
-  one hash; nothing pushes home. Material returns only through the **Crossing
-  Protocol**, in which you re-type abstractions by hand — no file ever crosses. Grafts
-  never seal, and they are **mortal by design**, with an exit ritual priced at seeding
-  rather than negotiated at departure.
+  legitimately read everything on their own side.
+
+  In practice this gives you **one Automaton at home and one at work** — the same soul
+  in two places — that can share what they have learned without either one's data
+  reaching the other. Your work Automaton gets your standards, your judgment, and the
+  lessons you have accumulated, without you carrying a decade of personal life into
+  your employer's systems. Your home Automaton gets better at its job over the years
+  you spend at that employer, without ever ingesting a byte of anyone's proprietary
+  work. That is a legal boundary and a privacy boundary at the same time, and grafts
+  exist because those two boundaries are the same wall seen from opposite sides.
+
+  Mechanically: a redacted fresh export, never shared history; its `soul/` stays
+  byte-identical to what you exported and is verifiable with one hash; nothing pushes
+  home. Material returns only through the **Crossing Protocol**, in which you re-type
+  abstractions by hand — no file ever crosses, which is what keeps "share the lessons,
+  never the data" true in practice rather than only in intent. Grafts never seal, and
+  they are **mortal by design**, with an exit ritual priced at seeding rather than
+  negotiated at departure.
   [graft.md](automaton-creator/references/graft.md)
 - **Succession** — repo transfer at your death, per a clause you write.
   **Inheritance-with-silence:** the Mind is the heirloom and passes whole; every hat
@@ -419,6 +434,5 @@ Built with [Claude Code](https://claude.com/claude-code).
 
 ## License
 
-MIT — see [LICENSE](LICENSE). One naming request, a convention rather than a license
-term: the eight-item hard floor is what makes an Automaton an Automaton. If you fork
-this and remove or weaken the floor, please call your fork something else.
+MIT — see [LICENSE](LICENSE). If you build something on top of this, a link back to the
+project is appreciated. Not a license term, just a preference.
