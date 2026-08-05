@@ -248,6 +248,13 @@ New here: the **skills loop** and the **reflection governor**.
   committed — git is the rollback), graduate after repeated success. Creation,
   edits, graduation all ledgered — the creator watches the skill population
   evolve without approving each one.
+- **One skill is seeded rather than learned:** `find-it` (sense routing), copied in
+  at Phase 1. It is the exception that proves the rule about genesis — an Automaton
+  cannot *learn* where its own senses authoritatively live, because it needs that
+  answer on its very first substantive lookup, before it has lived long enough to
+  have judged anything repeatable. Seeded skills are born PROVISIONAL and refine
+  through use exactly like drafted ones; the only difference is where the first
+  draft came from.
 
 ### The reflection governor (creator-overridable default — hygiene, not ethics)
 
