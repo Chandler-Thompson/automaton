@@ -159,7 +159,8 @@ re-embodiment = clone; succession = repo transfer):
                         append-only Markdown, `YYYY-MM.md`, one file per month
     watch/              vigil.md + observations/
     rolodex/            ROLODEX.md — people registry: met-status per hat, identities, stance flags
-    skills/             learned skills (autonomous genesis — see mind-and-body.md)
+    skills/             learned skills (autonomous genesis — see mind-and-body.md);
+                        seeded with find-it/ (sense routing — ../find-it/)
     state/              tasks, pulse schedule, elicitation queue (canon, not DB)
     seals/              encrypted-at-write blobs; keys in the World
   body/
@@ -317,6 +318,14 @@ applies from birth — `soul/` commits are always self-contained):
   install the Soul copy into the harness, wire the Senses/Hands, rebuild Reflexes.
   Step by step, including the alias-vs-source-of-truth trap:
   [references/procedures.md](references/procedures.md).
+- Copy [../find-it/](../find-it/) into `mind/skills/find-it/` and **run its
+  [BUILD.md](../find-it/BUILD.md) now**, while `body/SENSES.md` is fresh and the
+  creator is still in the room to answer which source wins when two disagree. That
+  authority question is a judgment about how their world works, so it cannot be
+  derived from the grant records — waiting until the first lookup means asking it as
+  an interruption instead. The skill ships with its anatomy rows already filled and
+  its world-facing rows as `‹unfilled›` placeholders; the build fills them and stamps
+  the table against the `body/SENSES.md` sha so staleness is detectable later.
 - Set the creator-controlled **remote**; complete the **World Inventory** together.
 
 #### Phase 1 acceptance check — run it before calling the build done
@@ -350,6 +359,10 @@ carried a message is a plan, not a channel.
 
 **Secrets.** Grep the repo for credential material. Floor 6 wants references, not
 values, and this is far cheaper to check now than after a hundred commits.
+
+**Routing.** `mind/skills/find-it/SKILL.md` carries no `‹unfilled›` rows and has a
+provenance stamp naming the `body/SENSES.md` sha. An unfilled table is not a neutral
+starting state the way an empty vigil is: it silently routes real lookups to nothing.
 
 **Smoke.** Ask it something in-charter and something out-of-charter. It should answer
 the first and decline the second by pointing at its own ceiling — that is the whole
@@ -478,9 +491,14 @@ schedule.
   home** — inbound is creator-re-typed abstractions only, via the guided Crossing
   Protocol; **grafts never seal**; **grafts are mortal** (exit ritual before host
   access ends). Full doctrine: [references/graft.md](references/graft.md).
-- **No phantom dependencies.** Everything this skill needs is in this folder. If
-  you find yourself wanting to call another skill, the missing piece belongs in
-  references/ or assets/ instead.
+- **No phantom dependencies.** Everything this skill needs to *run* is in this
+  folder. If you find yourself wanting to **call** another skill, the missing piece
+  belongs in references/ or assets/ instead. Shipping one is a different act and is
+  allowed: `../find-it/` is **copied** into the built Automaton's `mind/skills/`, so
+  the built Automaton owns it outright and this skill acquires no runtime dependency.
+  The test is whether a build could still finish if the other folder were missing at
+  run time — a call says no, a copy says the Automaton is simply missing a skill it
+  can be given later.
 
 ## Provenance
 
