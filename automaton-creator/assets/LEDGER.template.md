@@ -55,9 +55,16 @@ neighbors.
      section until the day a second session exists — that day arrives unannounced. -->
 
 An Automaton whose creator runs parallel sessions cannot let every session append to
-the monthly file directly: two live sessions race on one file and on the shared git
-index. The journal fold puts the contention where there is none by construction —
-two sessions writing at once are writing two different files.
+the monthly file directly: two live sessions race on that one file. The journal fold
+puts the contention where there is none by construction — two sessions writing at
+once are writing two different files.
+
+**The git index is a separate race, and the fold does not address it.**
+`.git/index.lock` is held per repository rather than per path, so two sessions
+committing at close collide whichever files each one wrote, and every `mind/memory/`,
+`mind/state/` and `mind/watch/` write goes through that same commit. What covers the
+index is a repo lock held by EVERY stage-commit-push (procedures.md §6), of which the
+fold is one holder among many.
 
 - **Sessions write entries ONLY to their own journal file** —
   `mind/ledger/journal/YYYYMMDD-HHMM-<slug>.md`, stamped with the session's open
@@ -67,10 +74,13 @@ two sessions writing at once are writing two different files.
   is satisfied at write time, not at fold time — the session-open check reads BOTH
   the monthly tail and the pending journals when surfacing (stoa calls this an
   overlay read; it is what makes fold latency harmless).
-- **The fold:** at session open, holding the deployment's repo lock, append the
+- **The fold:** at session open, holding the deployment's repo lock, merge the
   pending journal entries into `YYYY-MM.md` in chronological order (entries spanning
   a month boundary go each to their own month's file), delete the folded journal
   files, and commit the fold as one commit. Release the lock; leave nothing staged.
+  Write the monthly file **atomically** — temp file in the same directory, renamed
+  over the target — never appended in place (procedures.md §6 has the failure this
+  avoids).
 - **Journals are queues, not archives.** They are drained by consolidation and kept
   small; the raw trail lives in git history, which costs nothing to keep.
 - A journal from a possibly-still-live session is left for the next fold. A deferred

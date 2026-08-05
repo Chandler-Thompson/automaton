@@ -195,12 +195,40 @@ docs/PROTOCOL.md), which named it so it could be cited apart from the tool.
 ### The lock
 
 The fold is the only writer of the monthly file, and it holds a lock for the whole
-stage-commit sequence. What the lock IS depends on where sessions live:
+stage-commit sequence.
 
-- **One machine, one repo** (the common case): a lockfile — created with the shell's
-  `noclobber` guarantee (`set -o noclobber; echo "$$ $(date -Iseconds) <purpose>" >
-  mind/state/locks/repo.lock`), never `mkdir`, which false-positives on any existing
-  file. Write the pid and timestamp INTO the lock: a leaked lock from a crashed
+**Scope the lock wider than the fold.** `.git/index.lock` is per repository, so every
+stage-commit-push in the Mind contends with every other one, not only the ledger
+ones. The rule that actually holds is: any session staging and committing anything in
+this repo takes this lock first. The fold is one holder among many.
+
+What the lock IS depends on where sessions live:
+
+- **One machine, one repo** (the common case): a lockfile. Two primitives work, and
+  the only real hazard is mixing them on one lock — pick a convention and keep it.
+  - A **plain file** taken with the shell's `noclobber` guarantee, in a subshell, with
+    the exit status read at the redirect:
+    ```sh
+    LOCK=mind/state/locks/repo.lock
+    if ( set -o noclobber; echo "$$ $(date -Iseconds) <purpose>" > "$LOCK" ) 2>/dev/null; then
+        :   # holder
+    else
+        :   # held
+    fi
+    ```
+    The subshell keeps `noclobber` out of the calling shell, the status must be read
+    at the redirect or the failure is silent, and `>|` bypasses the option entirely,
+    so it must never appear on this path.
+  - A **directory** taken with `mkdir`, which is atomic on every filesystem this
+    recipe is likely to meet, including shared ones where `O_EXCL`-style exclusivity
+    has historically been unreliable. Prefer this if the repo can ever live on a
+    network filesystem. Write the pid file INSIDE the directory.
+
+  `mkdir` failing against an existing plain file of the same name is correct
+  behaviour, not a false positive — it is only a problem for a deployment that
+  declared the lock a file and then reached for `mkdir` anyway.
+
+  Either way, write the pid and timestamp INTO the lock: a leaked lock from a crashed
   session looks identical to live contention, and the pid is how the next session
   tells them apart (dead pid → remove, note it in the fold commit; live pid → defer
   the fold).
@@ -210,9 +238,19 @@ stage-commit sequence. What the lock IS depends on where sessions live:
 
 ### Failure cases the recipe must survive
 
-- **Fold interrupted between append and delete:** the next fold de-duplicates by
-  entry header (timestamp + title) before re-appending — entries are idempotent by
-  their headers.
+- **Fold interrupted mid-write:** make the write atomic instead of detecting it after
+  the fact. Build the new monthly content in a temp file in the SAME directory and
+  `rename` it over the target, which is atomic within a filesystem, so the monthly
+  file is only ever the old version or the complete new one. Appending in place does
+  not survive a fold killed partway through an entry BODY: the header is already in
+  the monthly file, the next fold matches it, skips the re-append, and leaves the
+  truncated entry in place permanently — in the one record floor 1 cannot afford to
+  blur.
+- **Fold interrupted between the rename and the journal delete:** the remaining
+  window, and the one header-matching does cover. The next fold de-duplicates by
+  entry header (timestamp + title) before re-appending. That dedup is sound only
+  because the atomic rename guarantees any entry whose header is present is also
+  complete.
 - **Lock holder died:** dead-pid check above. A lock is never simply deleted on age
   alone; age plus a dead pid, or age plus no matching activity in `git log`, is the
   bar.
