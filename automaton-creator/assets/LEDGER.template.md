@@ -1,9 +1,10 @@
 # Ledger — {{AUTOMATON_NAME}} (floor 1, first-class Facet)
 
 <!-- Seed this as mind/ledger/README.md; entries go in mind/ledger/YYYY-MM.md files
-     (one per month), newest first within a file. An unledgered representation is an
-     INCOMPLETE action. Surface unsurfaced entries at the very next creator
-     interaction (the session-open heartbeat checks this). -->
+     (one per month), appended in chronological order — the file is append-only,
+     and prepending newest-first would contradict that on its face. An unledgered
+     representation is an INCOMPLETE action. Surface unsurfaced entries at the very
+     next creator interaction (the session-open heartbeat checks this). -->
 
 ## Format — this file is canonical
 
@@ -44,6 +45,50 @@ neighbors.
   entry. Name the source, and surface it to the creator before anything else.
 - **AMENDMENT** — Charter/Registry/succession-clause changes.
 - **SUCCESSION** — claims, challenge-period attempts, corroboration, execution.
+
+## Concurrent sessions — the journal fold
+
+<!-- Adopted from the stoa project's journal-fold write model
+     (github.com/Chandler-Thompson/stoa, docs/PROTOCOL.md), which names the model
+     precisely so it can be cited apart from stoa the tool. Field-proven on the
+     gen-0 exemplar since 2026-07-28. Single-session deployments may ignore this
+     section until the day a second session exists — that day arrives unannounced. -->
+
+An Automaton whose creator runs parallel sessions cannot let every session append to
+the monthly file directly: two live sessions race on that one file. The journal fold
+puts the contention where there is none by construction — two sessions writing at
+once are writing two different files.
+
+**The git index is a separate race, and the fold does not address it.**
+`.git/index.lock` is held per repository rather than per path, so two sessions
+committing at close collide whichever files each one wrote, and every `mind/memory/`,
+`mind/state/` and `mind/watch/` write goes through that same commit. What covers the
+index is a repo lock held by EVERY stage-commit-push (procedures.md §6), of which the
+fold is one holder among many.
+
+- **Sessions write entries ONLY to their own journal file** —
+  `mind/ledger/journal/YYYYMMDD-HHMM-<slug>.md`, stamped with the session's open
+  time, same entry format as the monthly file. The monthly file is written only
+  during a lock-held fold.
+- **An entry in a journal file is as ledgered as one in the monthly file.** Floor 1
+  is satisfied at write time, not at fold time — the session-open check reads BOTH
+  the monthly tail and the pending journals when surfacing (stoa calls this an
+  overlay read; it is what makes fold latency harmless).
+- **The fold:** at session open, holding the deployment's repo lock, merge the
+  pending journal entries into `YYYY-MM.md` in chronological order (entries spanning
+  a month boundary go each to their own month's file), delete the folded journal
+  files, and commit the fold as one commit. Release the lock; leave nothing staged.
+  Write the monthly file **atomically** — temp file in the same directory, renamed
+  over the target — never appended in place (procedures.md §6 has the failure this
+  avoids).
+- **Journals are queues, not archives.** They are drained by consolidation and kept
+  small; the raw trail lives in git history, which costs nothing to keep.
+- A journal from a possibly-still-live session is left for the next fold. A deferred
+  fold loses nothing (surfacing already happened at write time); a raced one
+  corrupts the one record floor 1 cannot afford to blur.
+
+Lock mechanics are deployment-specific (procedures.md §6): a single-box deployment
+needs only a local lockfile; a distributed one can use stoa's branch-as-lock.
 
 ## Discipline
 

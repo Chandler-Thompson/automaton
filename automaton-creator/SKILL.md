@@ -157,10 +157,13 @@ re-embodiment = clone; succession = repo transfer):
     memory/             MEMORY.md index + topic files (two-tier)
     ledger/             the transparency ledger — first-class Facet (floor 1);
                         append-only Markdown, `YYYY-MM.md`, one file per month
+      journal/          per-session entry files, folded into the month under lock
+                        (the journal fold — LEDGER.template.md, procedures.md §6)
     watch/              vigil.md + observations/
     rolodex/            ROLODEX.md — people registry: met-status per hat, identities, stance flags
     skills/             learned skills (autonomous genesis — see mind-and-body.md)
     state/              tasks, pulse schedule, elicitation queue (canon, not DB)
+      locks/            repo lock taken by every stage-commit-push (procedures.md §6)
     seals/              encrypted-at-write blobs; keys in the World
   body/
     ANATOMY.md          embodiment map (Brain/Nervous System/Heartbeat/Reflexes) + gotchas
@@ -311,7 +314,8 @@ applies from birth — `soul/` commits are always self-contained):
   creator row filled, everything else empty); `mind/watch/vigil.md` from
   [assets/VIGIL.template.md](assets/VIGIL.template.md) (empty is correct —
   reflection is earned by living); `mind/skills/`, `mind/state/`, `mind/seals/`
-  seeded empty.
+  seeded empty, plus `mind/ledger/journal/` and `mind/state/locks/` — the two
+  directories the journal fold writes to (procedures.md §6).
 - `body/ANATOMY.md`, `body/SENSES.md` (incl. the two command channels + recovery
   hash), `body/HANDS.md` from their templates — blueprint only; then **deploy**:
   install the Soul copy into the harness, wire the Senses/Hands, rebuild Reflexes.
