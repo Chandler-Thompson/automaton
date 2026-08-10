@@ -1,7 +1,8 @@
 # Automaton
 
-**Automaton is a [Claude Code](https://claude.com/claude-code) skill** — a folder of
-Markdown instructions. Nothing in it executes on its own. What it walks you through
+**Automaton ships as an Agent Skill** — a folder of Markdown instructions that
+[Claude Code](https://claude.com/claude-code), [Cursor](https://cursor.com), and
+other harnesses can load. Nothing in it executes on its own. What it walks you through
 building is an AI agent that **remembers you between sessions**: your people, your
 plans, your goals, your values, and the reasons behind them — and holds all of it in
 mind when it answers you, when it suggests something, and when it looks at whatever
@@ -185,12 +186,56 @@ installing, read that.
 
 ## Install
 
+Clone once, then link `automaton-creator` into the skills directory for the harness
+you use. Profiles with full deploy notes live under
+[automaton-creator/harnesses/](automaton-creator/harnesses/README.md).
+
+### Claude Code
+
 ```bash
 git clone https://github.com/Chandler-Thompson/automaton.git ~/github/automaton
+mkdir -p ~/.claude/skills
 ln -s ~/github/automaton/automaton-creator ~/.claude/skills/automaton-creator
 ```
 
-Then tell Claude: **"build my automaton."**
+Windows (PowerShell):
+
+```powershell
+git clone https://github.com/Chandler-Thompson/automaton.git $env:USERPROFILE\github\automaton
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude\skills" | Out-Null
+New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\automaton-creator" `
+  -Target "$env:USERPROFILE\github\automaton\automaton-creator"
+```
+
+### Cursor
+
+```bash
+git clone https://github.com/Chandler-Thompson/automaton.git ~/github/automaton
+mkdir -p ~/.cursor/skills
+ln -s ~/github/automaton/automaton-creator ~/.cursor/skills/automaton-creator
+```
+
+Windows (PowerShell):
+
+```powershell
+git clone https://github.com/Chandler-Thompson/automaton.git $env:USERPROFILE\github\automaton
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.cursor\skills" | Out-Null
+New-Item -ItemType Junction -Path "$env:USERPROFILE\.cursor\skills\automaton-creator" `
+  -Target "$env:USERPROFILE\github\automaton\automaton-creator"
+```
+
+Do not install into `~/.cursor/skills-cursor/` — that directory is reserved for
+Cursor built-ins. Project-scoped install also works:
+`<workspace>/.cursor/skills/automaton-creator`.
+
+### Other harnesses
+
+Use [automaton-creator/harnesses/generic.md](automaton-creator/harnesses/generic.md):
+point the harness at this skill folder (or paste the trigger phrase with the files
+in context). Phase 0 still asks which Nervous System you run; Phase 1 records the
+deploy map in `body/ANATOMY.md`.
+
+Then tell the agent: **"build my automaton."**
 
 You can also enter directly at a later stage — *"run the corpus phase for hat X"*,
 *"run calibration for hat X register Y"*, *"graft me onto work"*, *"someone is claiming
@@ -407,10 +452,14 @@ front page.
 ## Where to read next
 
 ```
-docs/walkthrough.md       a full worked build — start here
+docs/walkthrough.md                 a full worked build — start here
+docs/cursor-embody-multi-repo.md    talk to a built Automaton in Cursor
+                                    (multi-repo workspace how-to)
 automaton-creator/
   SKILL.md                the process the agent follows: floor, ladder, anatomy,
                           five phases, entry points, hard rules
+  harnesses/              Nervous System profiles — Claude Code, Cursor, generic;
+                          install + deploy recipes (Body only, not Soul)
   references/             glossary · hard-floor · mind-and-body · corpus-and-voice ·
                           calibration-protocol · procedures · succession · graft
   assets/                 a template for every file an Automaton is born with —
@@ -430,7 +479,9 @@ Generalized from one real build, across four design sessions in July 2026: floor
 ladder, succession, Mind and Body, grafts. The skill is the *how*. The *why* lives in
 the creator's private design records — see the honesty note above about what that means.
 
-Built with [Claude Code](https://claude.com/claude-code).
+Built with [Claude Code](https://claude.com/claude-code); packaging also targets
+[Cursor](https://cursor.com) Agent Skills and any harness that can load the same
+Markdown skill folder. Claude Code remains the most proven embodiment path.
 
 ## License
 
