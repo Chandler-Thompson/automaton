@@ -64,13 +64,20 @@ unverified seal is a promise about the creator's most private material.
 runs. Re-embodiment repeats this whole procedure on new hardware, a new harness, or a
 new model; nothing here should surprise the person doing it the second time.
 
+0. **Pick the harness profile.** Creator-skill recipes for known Nervous Systems
+   live in [harnesses/](../harnesses/README.md) (`claude-code`, `cursor`,
+   `generic`, …). Profiles are **recipes, not law** — they do not change the floor,
+   the zones, or this procedure. Record harness id, profile path, deploy path, and
+   symlink-or-copy in `body/ANATOMY.md` as you go. Unknown harness → `generic.md`
+   and fill the blanks; do not block the build.
 1. **Clone the repo** to the host that will run it.
 2. **Install the Soul where the harness reads it.** Most harnesses expect a contract
    file at a fixed path. If yours does, the deployed copy is an **alias of
    `soul/AGENT.md`, never a second source of truth.** Prefer a symlink so the two
    cannot drift; if the harness cannot follow symlinks, copy it and record in
    `body/ANATOMY.md` that a copy exists and must be re-copied on every Soul change.
-   Two contracts that disagree is the worst failure mode available here.
+   Two contracts that disagree is the worst failure mode available here. Follow the
+   profile's deploy section for where *this* harness looks.
 3. **Map every flattened path.** Harnesses often flatten the zone structure. Record
    the mapping in `body/ANATOMY.md` — deployment alias on the left, the real
    zone-prefixed path on the right. **The zone path governs**; the alias is a local

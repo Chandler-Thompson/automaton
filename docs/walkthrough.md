@@ -78,6 +78,11 @@ explanation and does not choose for her. She picks **read-only**: if the floor c
 ever fails, it may look things up and answer her, but it writes nothing in her voice
 until she clears it.
 
+**Nervous System.** She runs Claude Code. The skill opens
+`automaton-creator/harnesses/claude-code.md` and carries those install/deploy notes
+into Phase 1. (Had she said Cursor, or named another harness, the matching profile —
+or `generic.md` — would apply the same way. Harness choice is Body, not Soul.)
+
 **Start the World Inventory.** A checklist on Dana's side, which will never enter the
 repo: remote location, floor fingerprint, seal keys, recovery token, where sealed
 samples live.

@@ -289,7 +289,7 @@ Doctrine: **reflection is earned by living.**
 | Body Facet | What it is | Newborn example |
 |---|---|---|
 | **Brain** | The model itself — the Brain runs, the Mind is data; swap the Brain, keep the Mind | the frontier model of the era |
-| **Nervous System** | The runtime that carries signals — reads the repo, routes perception to Brain, intention to Hands, runs the loop | an agentic harness (e.g. Claude Code) |
+| **Nervous System** | The runtime that carries signals — reads the repo, routes perception to Brain, intention to Hands, runs the loop | an agentic harness (e.g. Claude Code, Cursor, or any harness that loads Markdown contracts — see `harnesses/`) |
 | **Heartbeat** | Presence infra: session wake, scheduled pulses, event-wake — the presence ladder made physical | session-only |
 | **Senses** | Read-connections: inboxes, feeds, mounts, watches — where the Watcher self-extends; the injection surface (floor 4) | email/calendar MCP, notes-vault mount |
 | **Hands** | Act-connections: send, post, commit, purchase — where the ladder bites; nothing touches the world except through a Hand | email drafts, filesystem |

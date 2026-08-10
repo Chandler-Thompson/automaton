@@ -1,11 +1,14 @@
 # /crossing — Home Half ({{AUTOMATON_NAME}}, creator side)
 
-<!-- Deploy at the home Automaton as a command/skill in its Nervous System
-     (e.g. Claude Code: a skill or .claude/commands entry). One graft = one
-     manifest; run with the graft name. The creator is the CHANNEL, never the
-     bookkeeper — this command owns the checklist. Both halves are stateful and
-     guide their own side; an entry with no mate on the other side is an integrity
-     incident. Full doctrine: the `automaton-creator` skill, references/graft.md. -->
+<!-- Deploy at the home Automaton via whatever command mechanism the Nervous
+     System exposes (skill, slash command, project rule, or explicit chat
+     phrase — see automaton-creator/harnesses/<id>.md and record the choice in
+     body/ANATOMY.md). Examples: Claude Code skill or .claude/commands entry;
+     Cursor skill or rule. One graft = one manifest; run with the graft name.
+     The creator is the CHANNEL, never the bookkeeper — this command owns the
+     checklist. Both halves are stateful and guide their own side; an entry with
+     no mate on the other side is an integrity incident. Full doctrine: the
+     `automaton-creator` skill, references/graft.md. -->
 
 Run **before the creator leaves for the graft host** (outbound leg) and **when
 they return** (inbound leg). A crossing is one ritual carrying four jobs:

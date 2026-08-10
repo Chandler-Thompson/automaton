@@ -8,12 +8,32 @@
 
 | Facet | Current | Notes |
 |---|---|---|
-| **Brain** | {{MODEL e.g. best available Claude}} | The Brain runs, the Mind is data — swap freely |
-| **Nervous System** | {{HARNESS e.g. Claude Code}} | Runtime that carries signals; reads this repo |
+| **Brain** | {{MODEL e.g. frontier model of the era}} | The Brain runs, the Mind is data — swap freely |
+| **Nervous System** | {{HARNESS display name e.g. Claude Code / Cursor / other}} | Runtime that carries signals; reads this repo |
 | **Heartbeat** | {{PRESENCE_RUNG: session-only / pulses / event-wake}} | Presence is earned (ladder); pulse cadence per Charter |
 | **Senses** | see [SENSES.md](SENSES.md) | Read-connections; injection surface (floor 4) |
 | **Hands** | see [HANDS.md](HANDS.md) | Act-connections; the ladder bites here |
 | **Reflexes** | {{STORES e.g. none / SQLite FTS index}} | Reflex Rule: always rebuildable from mind/, never authoritative |
+
+## Nervous System profile
+
+<!-- Filled at Phase 1 deploy from automaton-creator/harnesses/<id>.md.
+     Harness identity lives here in Body — never in soul/. -->
+
+- Harness id: {{claude-code | cursor | generic | other-slug}}
+- Profile doc: `automaton-creator/harnesses/{{id}}.md` (creator-skill clone; not part of this repo)
+- Deploy path: {{where the harness reads the agent contract}}
+- Soul install: {{symlink | copy}} — if copy, re-copy on every Soul change
+- Crossing / commands: {{skill | slash-command | rule | chat-phrase — per profile}}
+
+### Deployment aliases
+
+<!-- Left: harness-local name. Right: zone path (governs). -->
+
+| Deployment alias | Zone path |
+|---|---|
+| {{e.g. AGENTS.md or harness agent file}} | soul/AGENT.md |
+| {{optional flattened names}} | {{zone path}} |
 
 ## Reflex rebuild
 
@@ -26,7 +46,7 @@
 
 - Machine/OS: {{ENVIRONMENT}}
 - Repo (canonical Automaton): {{REPO_PATH}} — remote: {{REMOTE_NAME_ONLY, creator-controlled — see World Inventory}}
-- Deployed Soul copy: {{DEPLOY_PATH e.g. harness agent folder}} (redeployed from soul/ at install)
+- Deployed Soul copy: {{DEPLOY_PATH}} (redeployed from soul/ at install; must match Deploy path above)
 - Raw corpus working area (outside repo): {{INGEST_PATH e.g. ~/.automaton-ingest/}}
 - Calibration records (NEVER READ): {{LOCATION_REFERENCE_ONLY}}
 - Sealed held-outs (NEVER READ): {{LOCATION_REFERENCE_ONLY}}
