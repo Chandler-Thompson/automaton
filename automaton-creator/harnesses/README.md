@@ -11,7 +11,7 @@ harness,* and *how do I deploy a built Automaton onto it?*
 | Profile | Status |
 |---|---|
 | [claude-code.md](claude-code.md) | First-class; the original build path |
-| [cursor.md](cursor.md) | First-class packaging; embodiment less battle-tested |
+| [cursor.md](cursor.md) | First-class packaging; embodiment less battle-tested — see also [docs/cursor-embody-multi-repo.md](../../docs/cursor-embody-multi-repo.md) |
 | [generic.md](generic.md) | Fallback for any harness that reads Markdown contracts |
 
 ## How to use

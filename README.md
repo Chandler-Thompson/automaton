@@ -452,7 +452,9 @@ front page.
 ## Where to read next
 
 ```
-docs/walkthrough.md       a full worked build — start here
+docs/walkthrough.md                 a full worked build — start here
+docs/cursor-embody-multi-repo.md    talk to a built Automaton in Cursor
+                                    (multi-repo workspace how-to)
 automaton-creator/
   SKILL.md                the process the agent follows: floor, ladder, anatomy,
                           five phases, entry points, hard rules

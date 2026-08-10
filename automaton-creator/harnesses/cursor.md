@@ -39,6 +39,11 @@ New-Item -ItemType Junction -Path "$env:USERPROFILE\.cursor\skills\automaton-cre
 
 ## Built Automaton deploy
 
+**Quick how-to (embody + multi-repo work):** see
+[docs/cursor-embody-multi-repo.md](../../docs/cursor-embody-multi-repo.md) —
+wire `AGENTS.md` / a Cursor rule, then open Automaton + a project folder in one
+workspace so the Automaton can update its own repo while you work elsewhere.
+
 1. Open the Automaton repo as the Cursor workspace (or add it as a workspace
    root). The zone tree (`soul/`, `mind/`, `body/`) stays intact in git.
 2. Surface the contract where Cursor will reliably load it. Prefer a **symlink
