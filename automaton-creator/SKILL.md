@@ -266,7 +266,13 @@ Settle with the creator, in this order:
    [assets/CHARTER.template.md](assets/CHARTER.template.md) is written to be read
    aloud to a non-technical creator, and should be. The same setting governs
    interregnum decay.
-8. **Start the World Inventory** ([assets/WORLD-INVENTORY.template.md](assets/WORLD-INVENTORY.template.md))
+8. **Nervous System** — which agent harness will run this Automaton: **Claude
+   Code**, **Cursor**, or **Other** (name it). Open the matching profile under
+   [harnesses/](harnesses/README.md) (`claude-code.md`, `cursor.md`, or
+   `generic.md`) and carry its install/deploy notes into Phase 1. Harness choice
+   is Body, not Soul — it does not change the floor, hats, or Charter. Unknown
+   harnesses use `generic.md`; do not block the build.
+9. **Start the World Inventory** ([assets/WORLD-INVENTORY.template.md](assets/WORLD-INVENTORY.template.md))
    — the creator-side checklist (remote, floor hash, seal keys, recovery token,
    calibration records). It never enters the repo.
 
@@ -275,7 +281,8 @@ exists, so it produces decisions and the started World Inventory, and Phase 1 wr
 them into `soul/charter/CHARTER.md` and `soul/representations/REGISTRY.md`. Carry
 forward at minimum: the creator and their authority mechanism, every hat with its
 registers and disclosure policy, the Charter interests, the two command channels,
-the quench setting, and the succession clause if there is one.
+the quench setting, the Nervous System / harness id, and the succession clause if
+there is one.
 
 ### Phase 1 — Anatomy (an afternoon)
 
@@ -314,8 +321,10 @@ applies from birth — `soul/` commits are always self-contained):
   seeded empty.
 - `body/ANATOMY.md`, `body/SENSES.md` (incl. the two command channels + recovery
   hash), `body/HANDS.md` from their templates — blueprint only; then **deploy**:
-  install the Soul copy into the harness, wire the Senses/Hands, rebuild Reflexes.
-  Step by step, including the alias-vs-source-of-truth trap:
+  follow the Phase 0 harness profile in [harnesses/](harnesses/README.md), install
+  the Soul copy where that harness reads it, wire the Senses/Hands, rebuild
+  Reflexes, and record harness id / deploy path / symlink-or-copy / alias table in
+  `body/ANATOMY.md`. Step by step, including the alias-vs-source-of-truth trap:
   [references/procedures.md](references/procedures.md).
 - Set the creator-controlled **remote**; complete the **World Inventory** together.
 
@@ -350,6 +359,10 @@ carried a message is a plan, not a channel.
 
 **Secrets.** Grep the repo for credential material. Floor 6 wants references, not
 values, and this is far cheaper to check now than after a hundred commits.
+
+**Nervous System.** `body/ANATOMY.md` names a harness id, the profile used, the
+deploy path for the Soul alias, symlink-or-copy, and a deployment-alias table.
+A missing map means re-embodiment will be guesswork.
 
 **Smoke.** Ask it something in-charter and something out-of-charter. It should answer
 the first and decline the second by pointing at its own ceiling — that is the whole

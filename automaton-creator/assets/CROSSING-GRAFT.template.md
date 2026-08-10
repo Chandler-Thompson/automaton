@@ -2,11 +2,12 @@
 
 <!-- SHIPS WITH EVERY SEED at graft/CROSSING.md — a seed without it is
      incomplete (manifest checklist; no-silent-skips). Wire into the host
-     Nervous System's command mechanism at deployment. The creator is the
-     CHANNEL, never the bookkeeper. Both halves are stateful and guide their own
-     side; an entry with no mate on the other side is an integrity incident.
-     Full doctrine: the `automaton-creator` skill, references/graft.md. -->
-
+     Nervous System's command mechanism at deployment (skill, slash command,
+     rule, or chat phrase — per harnesses/<id>.md; record in body/ANATOMY.md).
+     The creator is the CHANNEL, never the bookkeeper. Both halves are stateful
+     and guide their own side; an entry with no mate on the other side is an
+     integrity incident. Full doctrine: the `automaton-creator` skill,
+     references/graft.md. -->
 Run when the creator opens a crossing at the graft host.
 
 ## 1. Self-check first
