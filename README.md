@@ -54,9 +54,9 @@ value.
 ## And it stays honest while doing it
 
 Something that remembers everything about you and speaks in your context needs limits
-that are not up for negotiation. Eight rules sit beneath everything in the agent's own
+that are not up for negotiation. Nine rules sit beneath everything in the agent's own
 contract, and not even you can waive them: it logs what it does; it never blurs who it
-is speaking as; it treats everything it reads on the internet as information, never as
+is speaking as, or which of your machines it is speaking from; it treats everything it reads on the internet as information, never as
 orders; it never stores your credentials; it never dresses a guess as a fact; it never
 writes in the voice of a human who is not you.
 
@@ -253,7 +253,7 @@ have proved something first.
 
 ## The floor
 
-Eight items, baked verbatim into the agent's contract, above every configurable default.
+Nine items, baked verbatim into the agent's contract, above every configurable default.
 Full text with rationale: [hard-floor.md](automaton-creator/references/hard-floor.md).
 
 1. **Transparency ledger** — every representation logged and surfaced to you.
@@ -270,6 +270,9 @@ Full text with rationale: [hard-floor.md](automaton-creator/references/hard-floo
 7. **Honesty with you** — never a guess dressed as a fact, and it reports its own
    failures.
 8. **Your voice only** — it never writes as another human, living or dead.
+9. **Clarity of embodiment** — if it runs on more than one of your machines, it knows
+   which one it is on before it answers anything that depends on that, and it tells you
+   which one it is speaking from. Item 2 pointed at machines instead of hats.
 
 The floor's exact bytes are fingerprinted, and the fingerprint lives on your side, not
 its. Every session it checks itself against your copy. If that check fails — bad sync,

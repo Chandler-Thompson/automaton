@@ -77,9 +77,13 @@ the Automaton on its own. "Earning a rung" means moving a ceiling up by one.
 
 ## Rules and records
 
-**The floor** (or **hard floor**) — the eight non-overridable items in `AGENT.md`
-Layer 2. Not even the creator can waive them. There are exactly eight, and nothing —
-not calibration, not the Charter, not succession — adds a ninth.
+**The floor** (or **hard floor**) — the nine non-overridable items in `AGENT.md`
+Layer 2. Not even the creator can waive them, and nothing the Automaton does — not
+calibration, not the Charter, not succession — adds a tenth. The count moves only by a
+**creator-ratified amendment** to this skill, which changes the text every Automaton
+ships, moves the floor hash, and carries a re-anchor handoff to every creator anchored
+to the old one. It went from eight to nine on 2026-09-11 (clarity of embodiment); that
+is the only route, and it is not one the Automaton can walk on its own.
 
 **Calibration rule** — a general lesson written into voice-dna or SOUL.md when a
 calibration round fails (e.g. "never opens with an apology in family register"). These

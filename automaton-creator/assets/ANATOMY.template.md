@@ -4,6 +4,19 @@
      The running Body (harness install, DBs, gateways, live credentials) lives
      outside the repo and is deployed from this file. No secrets — floor 6. -->
 
+## Body identity (floor 9)
+
+**`BODY_LABEL`: {{BODY_LABEL e.g. Laptop, Workshop, Server-A}}** — the name this body
+answers to when the Automaton tells the creator where it is
+(`{{AUTOMATON_NAME}}|{{BODY_LABEL}}`).
+
+Recorded here and read at session open, never prettified at runtime: real hostnames
+are inconsistently cased, and a name invented on the fly becomes a second identifier
+for one machine. Machine-readable identity — inter-instance message filenames,
+blueprint filenames, host addresses — stays the literal hostname; the label is for
+talking to the creator. Once there is more than one body there is **one blueprint per
+body**, because a shared blueprint cannot answer "which paths do I have?"
+
 ## Body Facets (current embodiment)
 
 | Facet | Current | Notes |
