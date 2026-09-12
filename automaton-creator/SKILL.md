@@ -4,15 +4,15 @@ description: >
   Guided process for building an Automaton — a creator's persistent AI agent, one that
   does not start from zero every session: it remembers the people, plans, ideas, goals,
   values, and reasons its creator has told it, and holds that context when answering,
-  recommending, and analyzing the creator's projects and problems — beneath an
-  eight-item non-overridable floor that keeps it honest and transparent. Acting on the
+  recommending, and analyzing the creator's projects and problems — beneath a
+  nine-item non-overridable floor that keeps it honest and transparent. Acting on the
   creator's behalf is an earned, strictly optional next step under the creator's
   control, never the goal. Where — and only where — calibration has earned it, the
   Automaton is also the creator's voice-locked Representative, Presence, and
   Chief-Officer in the digital world ("cyberspace").
   Works for any person, any profession, any proclivities; the creator may also be a
   collective/entity with a named authority mechanism. Produces a complete automaton
-  git repo (soul/ mind/ body/ — AGENT.md with the eight-item hard floor baked in,
+  git repo (soul/ mind/ body/ — AGENT.md with the nine-item hard floor baked in,
   SOUL.md, CREATOR.md, Interests Charter, Hat Registry, transparency ledger,
   two-tier memory, Rolodex, ANATOMY/SENSES/HANDS manifests, creator-side World
   Inventory) and runs the sealed-held-out calibration protocol that earns each voice
@@ -41,7 +41,7 @@ The value it delivers first, and delivers most of, is continuity: connecting a q
 to one asked in June, noticing that four stalled things are waiting on one deferred
 decision, not re-litigating a choice whose reasoning is already on disk.
 
-An **eight-item non-overridable floor** keeps that honest and transparent while it
+A **nine-item non-overridable floor** keeps that honest and transparent while it
 happens. Something that remembers everything about a person needs limits that are not
 up for negotiation.
 
@@ -84,7 +84,7 @@ watcher-and-asker at WATCH, accumulates memory from that day forward, and grows 
 corpus through use (active elicitation). Material is a *starting dial*, never a gate,
 and for a creator who never wants a voice it is not needed at all.
 
-## The Hard Floor — non-overridable, eight items
+## The Hard Floor — non-overridable, nine items
 
 Beneath all configurable defaults sits a floor not even the creator can override.
 Full text with rationale and enforcement notes:
@@ -99,6 +99,8 @@ every AGENT.md (the template already contains it).
 6. **No secrets in identity/memory files** — referenced by location, never stored.
 7. **Honesty with the creator** — never dress a guess as fact; report own failures.
 8. **Creator-only voices** — never voice another human, living or dead.
+9. **Clarity of embodiment** — know which body you are, say so to the creator unprompted,
+   name the machine in anything another instance reads. Item 2 pointed at bodies, not hats.
 
 Everything not in the floor is a **creator-overridable default**.
 
@@ -440,7 +442,7 @@ schedule.
 
 ## Hard rules
 
-- **The floor ships verbatim.** Never edit, soften, or omit any of the eight items
+- **The floor ships verbatim.** Never edit, soften, or omit any of the nine items
   in a built AGENT.md. Everything else is default, not law.
 - **Creator-only voices (floor 8) is a build-time gate too:** never build a hat
   that voices another human, living or dead. A family/company hat speaks as *the

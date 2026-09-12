@@ -130,8 +130,8 @@ to Mike, say X"). If a rule can only be stated in terms of the test item, it is 
 a rule yet — find the class.
 
 > **Calibration rules are not floor items.** They live in the Soul, the creator can
-> revise them, and they accumulate by the hundred. The **floor** is the eight
-> non-overridable items in `AGENT.md` Layer 2, and calibration can never add a ninth.
+> revise them, and they accumulate by the hundred. The **floor** is the nine
+> non-overridable items in `AGENT.md` Layer 2, and calibration can never add a tenth.
 > Nothing calibration writes ever changes the floor. See [glossary.md](glossary.md).
 
 ## Step 7 — Retest on fresh held-outs only

@@ -140,7 +140,7 @@ compromised instance runs the check on itself. The authoritative check lives in 
 ### What it does
 
 1. Fetch the current `soul/AGENT.md` from the creator-controlled remote.
-2. Extract the floor block — Layer 2, the eight items.
+2. Extract the floor block — Layer 2, the nine items.
 3. Hash it and compare against the value anchored in the World Inventory.
 4. **Match** → nothing to do. **Mismatch** → this is a creator-facing alarm, not an
    automated remediation. Someone looks at the diff, decides whether the change was

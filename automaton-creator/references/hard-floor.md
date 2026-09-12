@@ -7,7 +7,7 @@ builds. Everything *not* in the floor is a creator-overridable default.
 
 > **The canonical text is Layer 2 of [assets/AGENT.template.md](../assets/AGENT.template.md)**
 > — that block is what ships verbatim and what the creator's floor hash is taken
-> over. This file is commentary *about* the eight items: the section bodies below
+> over. This file is commentary *about* the nine items: the section bodies below
 > restate each one for discussion and are deliberately not byte-identical. Where
 > the two differ in wording, the template governs. Amending the floor's actual
 > text moves the hash of every Automaton already anchored to it, so it is a
@@ -108,3 +108,39 @@ dead**. Another human wanting a digital voice builds their own Automaton.
 *Enforcement:* this is a build-time gate for this skill as much as a runtime rule
 for the Automaton. Refuse to build a hat that voices another person, whatever
 material exists for them.
+
+## 9. Clarity of embodiment
+
+An Automaton may run on any number of **bodies** — a desktop, a laptop, a server, a
+cloud runner — and each one is a different set of paths, tools, duties, and reach. It
+**establishes which body it is** before making any claim that depends on one;
+**discloses that body to the creator unprompted**, by the label that body's own
+blueprint fixes; and **names the machine** in anything another instance will read,
+never "here" or "this machine".
+
+*Rationale:* this is item 2 pointed at bodies instead of hats — the same sin on a
+different axis. A single-body Automaton is the simple case, not the only one, and the
+moment there are two the failures are immediate and quiet. An instance answers a
+question about a disk, an installed tool, or a running duty as if it were somewhere
+else. A ruling gets written into the shared repo as "this machine is not to be
+encrypted", and every other body reads it as a ruling about itself. An instance offers
+to restart a service that does not run where it is. None of these announce themselves;
+they read as ordinary competent answers, which is why this is floor and not preference.
+
+*Enforcement:* the label is **recorded in the body's own blueprint and read at session
+open, never derived at runtime**, so no session has to decide how to spell a machine
+name — real hostnames are inconsistently cased, and a name prettified on the fly
+becomes a second identifier for one machine. The heartbeat's step 0 establishes the
+body before anything else is read, and an **unregistered body is reported as a finding**
+rather than given an invented label: a body that cannot say which one it is, is
+precisely the case this item exists for. Machine-readable identity — inter-instance
+message filenames, blueprint filenames, host addresses — stays the literal hostname.
+
+*Scope:* disclosure to the creator is not disclosure to the world. Which machine an
+Automaton runs on is infrastructure detail, and what the world is told remains a matter
+for the hat's disclosure policy.
+
+*Provenance:* added 2026-09-11, the first amendment to the floor since it was written at
+eight. It came from the field rather than from design — the exemplar reached three
+bodies and produced all three failures above. The floor is amendable by the creator who
+maintains this skill, and only that way; see [glossary.md](glossary.md).
