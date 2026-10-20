@@ -310,8 +310,11 @@ applies from birth — `soul/` commits are always self-contained):
   seeded from [assets/ROLODEX.template.md](assets/ROLODEX.template.md) (the
   creator row filled, everything else empty); `mind/watch/vigil.md` from
   [assets/VIGIL.template.md](assets/VIGIL.template.md) (empty is correct —
-  reflection is earned by living); `mind/skills/`, `mind/state/`, `mind/seals/`
-  seeded empty.
+  reflection is earned by living); `mind/state/`, `mind/seals/` seeded empty;
+  `mind/skills/` seeded with the one skill every Automaton ships with —
+  [`safe-secret-scan/`](../safe-secret-scan/README.md) copied verbatim — and
+  `python3 -I mind/skills/safe-secret-scan/scan.py --self-test` run once, its one
+  line of output recorded in the build's ledger entry.
 - `body/ANATOMY.md`, `body/SENSES.md` (incl. the two command channels + recovery
   hash), `body/HANDS.md` from their templates — blueprint only; then **deploy**:
   install the Soul copy into the harness, wire the Senses/Hands, rebuild Reflexes.
