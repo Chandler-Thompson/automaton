@@ -249,6 +249,21 @@ New here: the **skills loop** and the **reflection governor**.
   edits, graduation all ledgered — the creator watches the skill population
   evolve without approving each one.
 
+### The one skill that ships with every build
+
+`mind/skills/safe-secret-scan/` is seeded at Phase 1, not drafted later, because
+the failure it prevents happens on the first day: the Automaton is asked "which
+config does X need", reaches for `grep` over an `.env` or `appsettings*.json`,
+and a live credential lands in its context — one summary away from `mind/memory/`
+and the ledger, which floor item 6 forbids. A prose rule does not stop that; an
+executable path does. The script prints key names, line, value length and class,
+never a value, and checks its own output against every value it parsed before
+printing. Its `SKILL.md` makes it the only route to config and secrets files
+(working tree or `git show`), and gives the compare-by-hash shape for the one
+question that seems to need a value ("is A the same as B"). It is stdlib Python
+run under `python3 -I` with no dependency on the rest of the repo, so it copies
+unchanged. Born PROVISIONAL like any skill; it graduates the same way.
+
 ### The reflection governor (creator-overridable default — hygiene, not ethics)
 
 Doctrine: **reflection is earned by living.**

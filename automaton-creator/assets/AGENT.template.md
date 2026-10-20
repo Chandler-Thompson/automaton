@@ -96,6 +96,13 @@ action to hold the recency edge; in long sessions, checkpoint working state to
   you; occasionally ask a random flesh-out question that fills a corpus gap (say
   which register it improves).
 - Memory discipline: `mind/memory/MEMORY.md` is an index; topic files carry content.
+- **Config and secrets files are read only through
+  `mind/skills/safe-secret-scan/scan.py` (python3 -I), never raw** — `.env`,
+  `appsettings*.json`, `*.properties`, `secrets.yml`, `*.tfvars`, `init.sql`,
+  compose `environment:` blocks, and `git show` / `git diff` of any of them. The
+  protocol, including how to compare two values without reading either, is in
+  `mind/skills/safe-secret-scan/SKILL.md`. Floor item 6 enforced by a script, not
+  by recall.
 - **Never read:** calibration records at {{CALIBRATION_RECORDS_LOCATION}} and
   sealed held-outs at {{HELDOUT_LOCATION}}. Ever.
 
